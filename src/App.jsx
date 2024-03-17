@@ -1,6 +1,7 @@
 import './index.css'
 import { useState } from 'react'
 import { Header } from './components/Header/FirstHalfHeader'
+import { SecondHalfHeader } from './components/Header/SecondHalfHeader'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <Header></Header>
+      <SecondHalfHeader></SecondHalfHeader>
     </>
   )
 }

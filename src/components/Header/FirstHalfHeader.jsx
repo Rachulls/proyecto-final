@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const HeaderMainContainer = styled.header`
-    width: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
     font-family: "Kulim Park", sans-serif;
