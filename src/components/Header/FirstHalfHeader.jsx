@@ -10,18 +10,17 @@ const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Ropa+Sans:ital@0;1&display=swap');
 
 
-
 `;
 
 const HeaderMainContainer = styled.header`
-    width: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
     font-family: "Kulim Park", sans-serif;
     background-color: #173083;
     padding: 20px;
 
-    @media (max-width: 756px) {
+    @media (max-width: 1680px) {
         display: none;
     }
 
@@ -70,7 +69,7 @@ const ContactoContainer = styled.div`
     gap: 10px;
 `;
 
-export const Header = () =>{
+export const FirstHalfHeader = () =>{
 
     
 

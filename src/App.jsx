@@ -1,15 +1,17 @@
 import './index.css'
 import { useState } from 'react'
-import { Header } from './components/Header/FirstHalfHeader'
 import { LandingPage } from './pages/LandingPage'
+import { MyRouters } from './Routers/Routes'
+
 
 function App() {
-  const [] = useState(0)
 
   return (
     <>
-      <Header/>
-      <LandingPage/>
+        <LandingPage>
+        <MyRouters />
+        </LandingPage>
+
     </>
   )
 }
