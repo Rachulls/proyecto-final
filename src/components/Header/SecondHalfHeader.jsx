@@ -7,6 +7,10 @@ import Icono2 from '../../img/nav2.png'
 import Icono3 from '../../img/nav3.png'
 import Icono4 from '../../img/nav4.png'
 import Icono5 from '../../img/nav5.png'
+import LogoBembos from '../../img/logoBembos2.png'
+import IconTelefono from '../../img/iconTelefono2.png'
+import MenuBurguer from '../../img/menuBurguer.png'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 
@@ -18,20 +22,34 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
-const MainContainer = styled.section`
+const MainContainer = styled.nav`
     min-width: 100%;
     box-shadow: 0 0 10px 5px rgba(129, 129, 129, 0.5); /* Color oscuro con un brillo de 0.5 */
     padding: 20px;
     padding-left: 100px;
     padding-right: 100px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media (max-width: 1720px) {
+      justify-content: space-around;
+    }
 
 `;
 
 const BarraNavegacion = styled.nav`
     width: 70%;
     display: flex;
+    align-items: center;
     gap: 20px;
+    position: relative;
+
+    @media (max-width: 1820px) {
+        width: 100%; /* Cambiar al 100% de ancho en dispositivos móviles */
+        justify-content: center; /* Centrar los elementos en dispositivos móviles */
+        display: none;
+    }
 `;
 
 const ElementoContainer = styled.div`
@@ -39,24 +57,78 @@ const ElementoContainer = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
+    @media (max-width: 1680px) {
+        display: none;
+         /* Alinear los elementos al principio del contenedor */
+    }
    
 `;
+
+const ElementoCarritoContainer = styled.div`
+    max-width: 286px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    justify-content: center;
+    position: relative;
+    @media (max-width: 1700px) {
+    }`;
+
+const BotonCarrito = styled.div`
+    max-width: 286px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    justify-content: center;
+    position: relative;
+    @media (max-width: 1680px) {
+        display: none;
+    }`;
+
 
 const Parrafo = styled.a`
       font-family: "Teko", sans-serif;
       color: #173083;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 600;
+
+      @media (max-width: 1820px) {
+        font-size: 1rem;
+    }
 `;
 
 const CarroContainer = styled.div`
     width: 30%;
     display: flex;
+    align-items: center;
     gap: 10px;
     font-family: "Agdasima", sans-serif;
 
+    @media (max-width: 1680px) {
+        
+      width: 100%;
+      justify-content: center;
+
+
+      position: relative;
+    }
+
 `;
+
+const Image = styled.img`
+    display: none;
+    height: 60px;
+    object-fit: cover; /* Ajustar la imagen dentro del contenedor sin distorsionarla */
+    position: relative;
+
+    @media (max-width: 1680px) {
+        
+        display: block;
+      }
+`;
+
 
 
 
@@ -64,41 +136,59 @@ export const SecondHalfHeader = () =>{
     return(
 
         <MainContainer>
+            <Image src={LogoBembos} alt="" />
+            <Router>
             <BarraNavegacion>
-                <ElementoContainer>
-                    <img src={Icono1} alt="" />
-                    <Parrafo>MENÚ</Parrafo>
-                </ElementoContainer>
-                <ElementoContainer>
-                    <img src={Icono2} alt="" />
-                    <Parrafo>COMBOS</Parrafo>
-                </ElementoContainer>
+            <Link to="/menu">
+            <ElementoContainer>
+                <img src={Icono1} alt="" />
+                <Parrafo>MENÚ</Parrafo>
+            </ElementoContainer>
+            </Link>
+
+            <Link to="/combos">
+             <ElementoContainer>
+                <img src={Icono2} alt="" />
+                <Parrafo>COMBOS</Parrafo>
+            </ElementoContainer>
+            </Link>
+
+             <Link to="/promociones">
                 <ElementoContainer>
                     <img src={Icono3} alt="" />
                     <Parrafo>PROMOCIONES</Parrafo>
                 </ElementoContainer>
+             </Link>
+             
+             <Link to="/hamburguesas">
                 <ElementoContainer>
-                    <img src={Icono4} alt="" />
+                     <img src={Icono4} alt="" />
                     <Parrafo>HAMBURGUESAS</Parrafo>
                 </ElementoContainer>
-                <ElementoContainer>
+             </Link>
+             <Link to="/beneficios">
+                 <ElementoContainer>
                     <img src={Icono5} alt="" />
                     <Parrafo>BENEFICIOS</Parrafo>
-                </ElementoContainer>
-                
+                 </ElementoContainer>
+            </Link>
             </BarraNavegacion>
+            </Router>
             <CarroContainer>
-                <ElementoContainer style={{gap:"20px", borderRadius:"90px", backgroundColor:"#fbb905", padding: "15px", paddingLeft:"50px", paddingRight:"20px"}}>
-              
+                {/* PRIMER BOTON */}
+                <ElementoCarritoContainer style={{gap:"20px", borderRadius:"90px", backgroundColor:"#fbb905", padding: "5px", paddingLeft:"20px", paddingRight:"0px"}}>
                 <LiaStoreAltSolid size={60} />
-    
-                <Parrafo style={{ width:"210px"}}>Pide en tiendas <span style={{color: "red"}}>SIN COLAS</span></Parrafo>
-                </ElementoContainer>
+                <Parrafo style={{ width:"210px", fontSize:"1rem"}}>Pide en tiendas <span style={{color: "red"}}>SIN COLAS</span></Parrafo>
+                </ElementoCarritoContainer>
 
-                <ElementoContainer style={{gap:"20px", borderRadius:"90px", backgroundColor:"#fbb905", padding: "15px", paddingLeft:"40px", paddingRight:"40px"}}>
-                    <BsCart2 size={60}/>
-                </ElementoContainer>
+                {/* SEGUNDO BOTON */}
+                <BotonCarrito style={{gap:"20px", borderRadius:"90px", backgroundColor:"#fbb905", padding: "15px", paddingLeft:"30px", paddingRight:"30px"}}>
+                    <BsCart2 size={40}/>
+                </BotonCarrito>
             </CarroContainer>
+            <Image src={IconTelefono} alt="" />
+            <Image src={MenuBurguer} alt="" />
+
         </MainContainer>
     
     )

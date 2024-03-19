@@ -1,16 +1,17 @@
 import './index.css'
 import { useState } from 'react'
-import { Header } from './components/Header/FirstHalfHeader'
-import { SecondHalfHeader } from './components/Header/SecondHalfHeader'
+import { LandingPage } from './pages/LandingPage'
+import { MyRouters } from './Routers/Routes'
 
 
 function App() {
-  const [] = useState(0)
 
   return (
     <>
-      <Header></Header>
-      <SecondHalfHeader></SecondHalfHeader>
+        <LandingPage>
+        <MyRouters />
+        </LandingPage>
+
     </>
   )
 }
