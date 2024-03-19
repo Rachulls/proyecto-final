@@ -73,7 +73,6 @@ const CardButton = styled.div`
   cursor: pointer;
   background: #21388b;
   color: #fff;
-  width: 40%;
   border-radius: 25px;
   margin-top: 10px;
   padding: 10px 20px;
