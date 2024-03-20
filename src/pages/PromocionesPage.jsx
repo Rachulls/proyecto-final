@@ -1,5 +1,14 @@
+import { FirstHalfHeader } from "../components/Header/FirstHalfHeader"
+import { SecondHalfHeader } from "../components/Header/SecondHalfHeader"
+import { OpcionesPromociones } from "../components/Promociones/OpcionesPromociones"
+
 export const PromocionesPage = () =>{
     return(
-        <h1>Promociones Page</h1>
+        <>
+        <FirstHalfHeader/>
+        <SecondHalfHeader/>
+        <OpcionesPromociones/>
+        </>
+        
     )
 }
