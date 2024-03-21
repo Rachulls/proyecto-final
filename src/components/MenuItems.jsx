@@ -31,7 +31,7 @@ const CardImage = styled.div`
     no-repeat;
   background-size: cover;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   width: 517px;
   height: 366px;
   color: #fff;
@@ -60,9 +60,11 @@ const CardImage = styled.div`
     4px -4px 0 #d90f06, 4px -3px 0 #d90f06, 4px -2px 0 #d90f06,
     4px -1px 0 #d90f06, 4px 0 0 #d90f06, 4px 1px 0 #d90f06, 4px 2px 0 #d90f06,
     4px 3px 0 #d90f06, 4px 4px 0 #d90f06;
-    h2{
-        padding-left: 20px;
-    }
+  h2 {
+    font-size: 40px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
 `;
 
 const CardButton = styled.div`
@@ -73,12 +75,11 @@ const CardButton = styled.div`
   cursor: pointer;
   background: #21388b;
   color: #fff;
-  width: 40%;
   border-radius: 25px;
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 25px;
-  a{
+  a {
     color: #fff;
     text-decoration: none;
   }
