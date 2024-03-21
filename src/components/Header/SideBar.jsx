@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const SideBarMainContainer = styled.nav`
-    height: 100vh;
+    height: 100%;
     width: 300px;
     background-color: #173083;
     display: flex;

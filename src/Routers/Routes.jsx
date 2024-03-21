@@ -10,7 +10,6 @@ import { BeneficiosPage } from "../pages/BeneficiosPage";
 
 export const MyRouters = () =>{
     <BrowserRouter>
-      
         <Routes>
             <Route path="/menu" element={<MenuPage/>}></Route>
             <Route path="/combos" element={<CombosPage/>}></Route>
