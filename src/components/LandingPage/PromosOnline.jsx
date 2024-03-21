@@ -71,10 +71,11 @@ const CardButtonOnline = styled.button`
 `;
 
 const Precio = styled.div`
-  display: flex;
+  display: flex !important;
+
   justify-content: center;
   height: 20%;
-  gap: 8px;
+  width: 70%;
   p {
     /* font-weight: 700; */
     color: #030819;
