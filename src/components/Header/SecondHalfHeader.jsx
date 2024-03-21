@@ -32,6 +32,7 @@ const MainContainer = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
     
      @media (max-width: 1480px) {
       justify-content: space-around;

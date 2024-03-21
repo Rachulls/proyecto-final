@@ -4,14 +4,17 @@ import styled from "styled-components";
 import data from "../../../../proyecto-final/db.json";
 
 const ComplementosGeneral = styled.div`
-padding-top: 60px;
+  padding-top: 60px;
+  max-width: 1134px;
+    width: 100%;
+    margin: auto;
+    background-color: #F6F7F8;
 `;
 
 const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-top: 30px;
+  padding: 0 30px;
+  margin-top: 20px;
+  margin-bottom: 45px;
 `;
 
 const CardImage = styled.div`
@@ -24,17 +27,25 @@ const CardImage = styled.div`
   height: 194px;
   gap: 20px;
   border-radius: 15px 15px 0 0;
+  a{
+    color: #fff;
+    text-decoration: underline;
+    display: flex;
+    padding: 160px 29px
+      }
 `;
 
 const CardContent = styled.div`
- margin-right: 60px;
-    max-width: 20rem;
-    width: 100%;
-    overflow: hidden;
-    border: 1.8px solid rgb(225, 225, 225);
-    border-radius: 13px;
-    cursor: pointer;
-    box-shadow: 4px 4px 13px rgba(209, 209, 209, 0.6);
+display: flex;
+flex-direction: column;
+align-items: center;
+  max-width: 20rem;
+  width: 100%;
+  overflow: hidden;
+  border: 1.8px solid rgb(225, 225, 225);
+  border-radius: 0 0 13px 13px;
+  cursor: pointer;
+  box-shadow: 4px 4px 13px rgba(209, 209, 209, 0.6);
   button {
     width: 171px;
     max-width: 100%;
@@ -80,12 +91,6 @@ const settingsCards = {
       },
     },
   ],
-
-  style: {
-    margin: "0 20px",
-    columnGap: "-30px",
-    position: "relative",
-  },
 };
 
 export const Complementos = () => {
@@ -96,10 +101,10 @@ export const Complementos = () => {
         <Slider {...settingsCards}>
           {data.complementos.map((item) => (
             <Card>
-              <CardImage image={item.img}></CardImage>
+              <CardImage image={item.img}><a>Términos y Condiciones</a></CardImage>
               <CardContent>
                 <h2>{item.nombre}</h2>
-                <h3>S/{item.precio}</h3>
+                <h3>S/. {item.precio}</h3>
                 <button>Ver más</button>
               </CardContent>
             </Card>

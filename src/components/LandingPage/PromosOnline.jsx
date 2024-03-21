@@ -71,10 +71,11 @@ const CardButtonOnline = styled.button`
 `;
 
 const Precio = styled.div`
-  display: flex;
+  display: flex !important;
+
   justify-content: center;
   height: 20%;
-  gap: 8px;
+  width: 70%;
   p {
     /* font-weight: 700; */
     color: #030819;
@@ -138,7 +139,7 @@ export const PromosOnline = () => {
               <CardText>
                 <a>{item.nombre}</a>
                 <Precio>
-                  <p>S/{item.precio_actual}</p>
+                  <p>S/. {item.precio_actual}</p>
                   <span>S/{item.precio_antiguo}</span>
                 </Precio>
                 <CardButtonOnline>
