@@ -11,7 +11,8 @@ import LogoBembos from '../../img/logoBembos2.png'
 import IconTelefono from '../../img/iconTelefono2.png'
 import MenuBurguer from '../../img/menuBurguer.png'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import { SideBar } from '../Header/SideBar'
+import { useState } from "react";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -114,7 +115,7 @@ const BotonCarrito = styled.div`
     `;
 
 
-const Parrafo = styled.a`
+const Parrafo = styled.p`
       font-family: "Teko", sans-serif;
       color: #173083;
       font-size: 1.2rem;
@@ -159,8 +160,19 @@ const Image = styled.img`
 
 
 export const SecondHalfHeader = () =>{
-    return(
 
+    const [ mostrarNav, setMostrarNav ] = useState(false);
+
+
+        const toggleNavBar = () => {
+            setMostrarNav(!mostrarNav);
+          };
+    
+
+
+
+ 
+    return(
         <MainContainer>
             <Image src={LogoBembos} alt="" />
             <Router>
@@ -213,7 +225,8 @@ export const SecondHalfHeader = () =>{
                 </BotonCarrito>
             </CarroContainer>
             <Image src={IconTelefono} alt="" />
-            <Image src={MenuBurguer} alt="" />
+            <Image src={MenuBurguer} onClick={toggleNavBar} />
+            {mostrarNav ? <SideBar /> : null}
 
         </MainContainer>
     
