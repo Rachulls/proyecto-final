@@ -1,14 +1,16 @@
-import { FirstHalfHeader } from "../components/Header/FirstHalfHeader"
-import { SecondHalfHeader } from "../components/Header/SecondHalfHeader"
-import { OpcionesPromociones } from "../components/Promociones/OpcionesPromociones"
+import { Complementos } from "../components/Promociones/Complementos"
+import { FiltroPromociones } from "../components/Promociones/FiltroPromociones"
+import { PromocionesParaDos } from "../components/Promociones/PromocionesParaDos"
+import { PromocionesPersonales } from "../components/Promociones/PromocionesPersonales"
 
 export const PromocionesPage = () =>{
     return(
         <>
-        <FirstHalfHeader/>
-        <SecondHalfHeader/>
-        <OpcionesPromociones/>
+        <FiltroPromociones/>
+        <PromocionesPersonales/>
+        <Complementos/>
+        <PromocionesParaDos/>
+        <Complementos/>
         </>
-        
     )
 }

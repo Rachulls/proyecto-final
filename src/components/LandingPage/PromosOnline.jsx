@@ -138,7 +138,7 @@ export const PromosOnline = () => {
               <CardText>
                 <a>{item.nombre}</a>
                 <Precio>
-                  <p>S/{item.precio_actual}</p>
+                  <p>S/. {item.precio_actual}</p>
                   <span>S/{item.precio_antiguo}</span>
                 </Precio>
                 <CardButtonOnline>
