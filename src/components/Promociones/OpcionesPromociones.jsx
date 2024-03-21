@@ -1,6 +1,9 @@
 import React from 'react';
+
 import styled from 'styled-components';
 import data from "../../../../proyecto-final/db.json";
+import { Complementos } from './Complementos';
+import Slider from 'react-slick';
 
 
 const TablaPromociones = styled.div`
@@ -60,14 +63,14 @@ h2{
 }
 `;
 
-const CardsPromosPersonales = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-bottom: 44px;
-    position: relative;
+// const CardsPromosPersonales = styled.div`
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 100%;
+//     padding-bottom: 44px;
+//     position: relative;
     
-`;
+// `;
 
 const Card = styled.div`
 display: flex;
@@ -103,6 +106,34 @@ display: flex;
     transition: all .4s;
 `;
 
+const settingsAll = {
+  speed: 500,
+  infinite: false,
+  slidesToShow: 2,
+  rows: 2,
+};
+
+const settingsResponsive = [
+  {
+    breakpoint: 992,
+    settings: {
+    slidesToShow: 1,
+    rows: 1,
+    vertical: true,
+    verticalSwiping: true,
+    },
+  },
+  {
+    breakpoint: 600,
+    settings: {
+    slidesToShow: 1,
+    rows: 1,
+    vertical: true,
+    verticalSwiping: true,
+    },
+  },
+];
+
 export const OpcionesPromociones = () => {
   return (
     <div>
@@ -120,7 +151,7 @@ export const OpcionesPromociones = () => {
             <img src="src\img\user-blackb.svg" alt="" />
             <h2>Promociones Personales</h2>
         </ListaPromosPersonales>
-        <CardsPromosPersonales>
+        <Slider {...settingsAll} responsive={settingsResponsive}>
             {data.promociones_personales.map((item) => (
                 <Card>
                     <CardContent>
@@ -130,13 +161,12 @@ export const OpcionesPromociones = () => {
                         <p>{item.precio_antiguo}</p>
                     </CardContent>
                 <CardImage image={item.img}>
-
                 </CardImage>
-
                 </Card>
             ))}
-        </CardsPromosPersonales>
+        </Slider>
         </PromocionesBody>
+        <Complementos/>
       </PromocionesContainer>
       </PromocionesGeneral>
       

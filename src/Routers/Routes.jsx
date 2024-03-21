@@ -7,6 +7,7 @@ import { PromocionesPage } from "../pages/PromocionesPage";
 import { HamburguesasPage } from "../pages/HamburguesasPage";
 import { BeneficiosPage } from "../pages/BeneficiosPage";
 
+
 export const MyRouters = () =>{
     <HashRouter>
         <Routes>

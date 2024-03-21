@@ -20,9 +20,9 @@ const HeaderMainContainer = styled.header`
     background-color: #173083;
     padding: 20px;
 
-    @media (max-width: 1680px) {
+     @media (max-width: 950px) {
         display: none;
-    }
+    } 
 
 
 `;
@@ -70,8 +70,6 @@ const ContactoContainer = styled.div`
 `;
 
 export const FirstHalfHeader = () =>{
-
-    
 
     return(<>
  

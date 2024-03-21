@@ -32,9 +32,22 @@ const MainContainer = styled.nav`
     justify-content: center;
     align-items: center;
     
-    @media (max-width: 1720px) {
+     @media (max-width: 1480px) {
       justify-content: space-around;
-    }
+        padding-left: 0px;
+        padding-right: 0px;
+    } 
+
+    @media (max-width: 1280px) {
+      justify-content: center;
+        gap:80px;
+    } 
+
+    @media (max-width: 950px) {
+        justify-content: center;
+        align-items: center;
+        gap:0px;
+    } 
 
 `;
 
@@ -44,12 +57,15 @@ const BarraNavegacion = styled.nav`
     align-items: center;
     gap: 20px;
     position: relative;
+     @media (max-width: 1280px) {
+        width: 40%;
+        justify-content: center;
+        gap: 15px;
+    } 
 
-    @media (max-width: 1820px) {
-        width: 100%; /* Cambiar al 100% de ancho en dispositivos móviles */
-        justify-content: center; /* Centrar los elementos en dispositivos móviles */
+    @media (max-width: 950px) {
         display: none;
-    }
+    } 
 `;
 
 const ElementoContainer = styled.div`
@@ -57,11 +73,15 @@ const ElementoContainer = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    @media (max-width: 1680px) {
-        display: none;
-         /* Alinear los elementos al principio del contenedor */
-    }
-   
+    
+     @media (max-width: 1265px) {
+        flex-direction: column;
+
+    }    
+
+    @media (max-width: 955px) {
+display: none;
+    } 
 `;
 
 const ElementoCarritoContainer = styled.div`
@@ -72,7 +92,11 @@ const ElementoCarritoContainer = styled.div`
     cursor: pointer;
     justify-content: center;
     position: relative;
-    @media (max-width: 1700px) {
+
+    @media (max-width: 950px) {
+    gap:0;
+
+
     }`;
 
 const BotonCarrito = styled.div`
@@ -83,9 +107,11 @@ const BotonCarrito = styled.div`
     cursor: pointer;
     justify-content: center;
     position: relative;
-    @media (max-width: 1680px) {
+
+     @media (max-width: 950px) {
         display: none;
-    }`;
+    } 
+    `;
 
 
 const Parrafo = styled.a`
@@ -93,10 +119,12 @@ const Parrafo = styled.a`
       color: #173083;
       font-size: 1.2rem;
       font-weight: 600;
+      list-style: none;
+      text-decoration: none;
 
-      @media (max-width: 1820px) {
-        font-size: 1rem;
-    }
+       @media (max-width: 1265px) {
+        font-size: 0.8rem;
+    } 
 `;
 
 const CarroContainer = styled.div`
@@ -106,14 +134,12 @@ const CarroContainer = styled.div`
     gap: 10px;
     font-family: "Agdasima", sans-serif;
 
-    @media (max-width: 1680px) {
+     @media (max-width: 950px) {
         
       width: 100%;
       justify-content: center;
-
-
       position: relative;
-    }
+    } 
 
 `;
 
@@ -123,10 +149,10 @@ const Image = styled.img`
     object-fit: cover; /* Ajustar la imagen dentro del contenedor sin distorsionarla */
     position: relative;
 
-    @media (max-width: 1680px) {
-        
+     @media (max-width: 950px) {
         display: block;
-      }
+
+      } 
 `;
 
 
@@ -142,34 +168,34 @@ export const SecondHalfHeader = () =>{
             <Link to="/menu">
             <ElementoContainer>
                 <img src={Icono1} alt="" />
-                <Parrafo>MENÚ</Parrafo>
+                <Parrafo style={{fontSize: "1rem"}}>MENÚ</Parrafo>
             </ElementoContainer>
             </Link>
 
             <Link to="/combos">
              <ElementoContainer>
                 <img src={Icono2} alt="" />
-                <Parrafo>COMBOS</Parrafo>
+                <Parrafo style={{fontSize: "1rem"}}>COMBOS</Parrafo>
             </ElementoContainer>
             </Link>
 
              <Link to="/promociones">
                 <ElementoContainer>
                     <img src={Icono3} alt="" />
-                    <Parrafo>PROMOCIONES</Parrafo>
+                    <Parrafo style={{fontSize: "1rem"}}>PROMOCIONES</Parrafo>
                 </ElementoContainer>
              </Link>
              
              <Link to="/hamburguesas">
                 <ElementoContainer>
                      <img src={Icono4} alt="" />
-                    <Parrafo>HAMBURGUESAS</Parrafo>
+                    <Parrafo style={{fontSize: "1rem"}}>HAMBURGUESAS</Parrafo>
                 </ElementoContainer>
              </Link>
              <Link to="/beneficios">
                  <ElementoContainer>
                     <img src={Icono5} alt="" />
-                    <Parrafo>BENEFICIOS</Parrafo>
+                    <Parrafo style={{fontSize: "1rem"}}>BENEFICIOS</Parrafo>
                  </ElementoContainer>
             </Link>
             </BarraNavegacion>
