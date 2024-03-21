@@ -7,7 +7,7 @@ import { MenuHamburguersOnline } from "../components/LandingPage/MenuHamburguesa
 import { SocialBembos } from "../components/LandingPage/SocialBembos";
 import { Banner } from '../components/Banner'
 import { Body } from '../components/Body'
-import { FirstHalfHeader } from '../components/Header/FirstHalfHeader'
+// import { FirstHalfHeader } from '../components/Header/FirstHalfHeader'
 
 export const LandingPage = () => {
   return (
@@ -21,11 +21,11 @@ export const LandingPage = () => {
       <MenuHamburguersOnline />
       <SocialBembos />
 
-                 {/* EL HEADER */}
+                 {/* EL HEADER
         <FirstHalfHeader></FirstHalfHeader>
         <SecondHalfHeader></SecondHalfHeader>
         <Banner></Banner>  
-        <Body></Body>  
+        <Body></Body>   */}
     </>
   );
 };

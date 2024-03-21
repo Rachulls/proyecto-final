@@ -1,27 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import data from "../../../../proyecto-final/db.json";
 import canje from "../../img/canje.jpg";
 
 const MenuHambsOnline = styled.div`
+ margin-top: 50px;
   max-width: 1134px;
   width: 100%;
   margin: auto;
-  margin-top: 50px;
-  img{
-    max-width: 100%;
-    height: auto;
-  }
+  padding-top: 50px;
 `;
 
 const CardMenuHamOnline = styled.div`
-  display: grid;
-  grid-template-columns: repeat(9, 1fr) auto;
+  display: flex;
+  flex-direction: row;
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
   max-width: 1134px;
   gap: 30px;
+  padding-top: 50px;
 `;
 
 const Card = styled.div`
@@ -38,6 +39,7 @@ const Card = styled.div`
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
   border-radius: 15px;
   background: #fff;
+  overflow: hidden;
   img {
     max-height: 255px;
     width: 100%;
@@ -45,6 +47,12 @@ const Card = styled.div`
     border-radius: 15px 15px 0 0;
     display: flex;
     align-items: flex-end;
+    object-fit: cover;
+    &:hover{
+      width: 100%;
+      transition: all 0.4s;
+      transform: scale(1.1) translateY(-5%);
+  }
   }
 `;
 
@@ -80,12 +88,37 @@ const CardButton = styled.button`
   color: #fff;
 `;
 
+const settings = {
+  dots: false,
+  infinite: false,
+  speed: 400,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  slidesPerRow: 1,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+  ]
+};
+
 export const MenuHamburguersOnline = () => {
   return (
     <MenuHambsOnline>
       <h2>MENU DE HAMBURGUESAS ONLINE</h2>
-      <CardMenuHamOnline>
+      <Slider {...settings}>
         {data.menu.map((item) => (
+      <CardMenuHamOnline>
           <Card>
             <img src={item.img} />
             <CardInfo>
@@ -95,9 +128,9 @@ export const MenuHamburguersOnline = () => {
               </CardButton>
             </CardInfo>
           </Card>
-        ))}
-        
       </CardMenuHamOnline>
+        ))}
+      </Slider>
       <img src={canje}/>
     </MenuHambsOnline>
   );
