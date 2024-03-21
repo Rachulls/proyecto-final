@@ -6,5 +6,6 @@ import { Body } from './components/Body.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <App />
+    <Body/>
   </>,
 )
