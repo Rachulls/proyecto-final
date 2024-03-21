@@ -12,10 +12,10 @@ function App() {
     <>
       <FirstHalfHeader />
       <SecondHalfHeader />
-      <LandingPage>
+      {/* <LandingPage>
         <MyRouters />
-      </LandingPage>
-      {/* <PromocionesPage /> */}
+      </LandingPage> */}
+      <PromocionesPage />
     </>
   );
 }
