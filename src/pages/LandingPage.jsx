@@ -7,6 +7,7 @@ import { MenuHamburguersOnline } from "../components/LandingPage/MenuHamburguesa
 import { SocialBembos } from "../components/LandingPage/SocialBembos";
 import { Banner } from '../components/Banner'
 import { Body } from '../components/Body'
+import { Footer } from '../components/Footer' 
 // import { FirstHalfHeader } from '../components/Header/FirstHalfHeader'
 
 export const LandingPage = () => {
@@ -20,7 +21,7 @@ export const LandingPage = () => {
       <PromosOnline />
       <MenuHamburguersOnline />
       <SocialBembos />
-
+      <Footer />
                  {/* EL HEADER
         <FirstHalfHeader></FirstHalfHeader>
         <SecondHalfHeader></SecondHalfHeader>
