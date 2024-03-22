@@ -1,5 +1,17 @@
+import { BarraCategoriasNav } from "../components/Combos/BarraCategoriasNav"
+import { CombosDeHamburguesas } from "../components/Combos/CombosDeHamburguesas"
+import { FirstHalfHeader } from "../components/Header/FirstHalfHeader"
+import { SecondHalfHeader } from "../components/Header/SecondHalfHeader"
+
 export const CombosPage = () =>{
+    
     return(
-        <h1>Combos Page</h1>
+        <>
+        <FirstHalfHeader/>
+        <SecondHalfHeader/>
+        <BarraCategoriasNav/>
+        <CombosDeHamburguesas/>
+        
+        </>
     )
 }

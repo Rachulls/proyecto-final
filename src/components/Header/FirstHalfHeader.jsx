@@ -4,6 +4,7 @@ import IconTelefono from '../../img/iconTelefono.png'
 import Persona from '../../img/Persona.png'
 import Flecha from '../../img/despliegueFlecha.png'
 import { createGlobalStyle } from 'styled-components';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -75,9 +76,11 @@ export const FirstHalfHeader = () =>{
  
         <HeaderMainContainer>
             <PrimeraMitad>
+                <Link to="/">
                 <LogoContainer>
                     <img src={LogoBembos} alt="" />
                 </LogoContainer>
+                </Link>
             </PrimeraMitad>
             <SegundaMitad>
                 <FlexContainer>
