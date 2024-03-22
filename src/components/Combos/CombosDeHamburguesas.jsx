@@ -2,7 +2,7 @@ import styled from "styled-components";
 import data from "../:./../../../db.json";
 
 const CombosDeHamburguesasMainContainer = styled.section`
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
 `;
 

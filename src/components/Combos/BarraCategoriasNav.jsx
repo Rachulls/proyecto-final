@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom"
 
 const NavMainContainer = styled.div`
     width: 80%;
@@ -21,19 +21,40 @@ const Enlace = styled.p`
 `;
 
 export const BarraCategoriasNav = () => {
-    return(
+    return (
         <>
-        <NavMainContainer>
-            <Enlace>COMBOS</Enlace>
-            <Enlace>HAMBURGUESAS</Enlace>
-            <Enlace>POLLO</Enlace>
-            <Enlace>MENÚS AL PLATO</Enlace>
-            <Enlace>LONCHERITAS</Enlace>
-            <Enlace>COMPLEMENTOS</Enlace>
-            <Enlace>BEBIDAS</Enlace>
-            <Enlace>HELADOS</Enlace>
-            <Enlace>INKA CHIPS</Enlace>
-        </NavMainContainer>
+            <NavMainContainer>
+                <Link to="/combos">
+                     <Enlace>COMBOS</Enlace>
+                </Link>
+                <Link to="/combos/hamburguesas">
+                    <Enlace>HAMBURGUESAS</Enlace>
+                </Link>
+                <Link to="/combos/pollo">
+                    <Enlace>POLLO</Enlace>
+                </Link>
+                <Link to="/combos/menus-al-plato">
+                    <Enlace>MENÚS AL PLATO</Enlace>
+                </Link>
+                <Link to="/combos/loncheritas">
+                    <Enlace>LONCHERITAS</Enlace>
+                </Link>
+
+                <Link to="/combos/complementos">
+                    <Enlace>COMPLEMENTOS</Enlace>
+                </Link>
+
+                <Link to="/combos/bebidas">
+                    <Enlace>BEBIDAS</Enlace>
+                </Link>
+                <Link to="/combos/helados">
+                    <Enlace>HELADOS</Enlace>
+                </Link>
+                <Link to="/combos/inka-chips">
+                    <Enlace>INKA CHIPS</Enlace>
+
+                </Link>
+            </NavMainContainer>
         </>
     )
 }

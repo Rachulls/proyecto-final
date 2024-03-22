@@ -89,18 +89,16 @@ const SimpleButon = styled.button`
 
 `;
 
-export const Pollo = () => {
+export const Bebidas = () => {
   return (
     <>
-
       <FirstHalfHeader />
       <SecondHalfHeader />
-      <BarraCategoriasNav />
-
+      <BarraCategoriasNav/>
 
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
-          {data.pollo[0].tipos.map((item) => (
+          {data.bebidas.map((item) => (
             <Card>
               <ImageContainer>
                 <img src={item.img} alt="" />

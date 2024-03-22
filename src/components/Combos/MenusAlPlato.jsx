@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import data from "../:./../../../db.json";
+import { FirstHalfHeader } from "../Header/FirstHalfHeader";
+import { SecondHalfHeader } from "../Header/SecondHalfHeader";
+import { BarraCategoriasNav } from "./BarraCategoriasNav";
 
 const CombosDeHamburguesasMainContainer = styled.section`
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
 `;
-
 const Titulo = styled.h2``;
 
 const HamburguesasGridContainer = styled.div`
@@ -89,6 +91,10 @@ const SimpleButon = styled.button`
 export const MenusAlPlato = () => {
   return (
     <>
+    <FirstHalfHeader />
+      <SecondHalfHeader />   
+      <BarraCategoriasNav/>
+
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
         {data.MenusAlPlato.map((item) => (

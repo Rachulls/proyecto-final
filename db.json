@@ -534,49 +534,49 @@
 	"bebidas": [
 		{
 			"nombre": "Agua San Luis S/G",
-			"precio": 4.9,
+			"precio": 4.90,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/s/a/san-luis-sin-gas-nueva.jpg",
 			"id": 34,
 			"link": "agua-san-luis-s-g"
 		},
 		{
 			"nombre": "Coca Cola Sabor Original 500 ml",
-			"precio": 5.9,
+			"precio": 5.90,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/coca-cola-original-500ml-nuevo.jpg",
 			"id": 35,
 			"link": "coca-cola-sabor-original-500-ml"
 		},
 		{
 			"nombre": "Coca Cola Sin Azúcar 500 ml",
-			"precio": 5.9,
+			"precio": 5.90,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/coca-cola-sin-azucar-500ml-nuevo.jpg",
 			"id": 36,
 			"link": "coca-cola-sin-azucar-500-ml"
 		},
 		{
 			"nombre": "Inca Kola Sabor Original 500 ml",
-			"precio": 5.9,
+			"precio": 5.90,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/inca-kola-original-500ml-nuevo.jpg",
 			"id": 37,
 			"link": "inka-kola-sabor-original-500-ml"
 		},
 		{
 			"nombre": "Sprite Sabor Original 500 ml",
-			"precio": 5.9,
+			"precio": 5.90,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/s/p/sprite-500ml-nuevo.jpg",
 			"id": 38,
 			"link": "sprite-sabor-original-500-ml"
 		},
 		{
 			"nombre": "Fanta Sabor Original 500 ml",
-			"precio": 5.9,
+			"precio": 5.90,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/f/a/fanta-500ml-nuevo.jpg",
 			"id": 39,
 			"link": "fanta-sabor-original-500-ml"
 		},
 		{
 			"nombre": "Inca kola Sin Azúcar 500 ml",
-			"precio": 5.9,
+			"precio": 5.90,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/inca-kola-sin-kola-500ml-nuevo.jpg",
 			"id": 40,
 			"link": "inca-kola-sin-azucar-500-ml"
@@ -585,7 +585,7 @@
 	"helados": [
 		{
 			"nombre": "Helado Mini Princesa",
-			"precio": 4.9,
+			"precio": 4.90,
 			"id": 41,
 			"img": "https://www.bembos.com.pe/_ipx/q_85,w_144,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/e/helado-mini-princesa-base_1.jpg",
 			"link": "helado-mini-princesa",
@@ -667,7 +667,7 @@
 			]
 		}
 	],
-	"inka-chips": [
+	"inkaChips": [
 		{
 			"nombre": "Papas Inka Chips",
 			"precio": 3,

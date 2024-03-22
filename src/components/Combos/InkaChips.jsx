@@ -89,18 +89,16 @@ const SimpleButon = styled.button`
 
 `;
 
-export const Pollo = () => {
+export const InkaChips = () => {
   return (
     <>
-
       <FirstHalfHeader />
       <SecondHalfHeader />
       <BarraCategoriasNav />
 
-
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
-          {data.pollo[0].tipos.map((item) => (
+          {data.inkaChips.map((item) => (
             <Card>
               <ImageContainer>
                 <img src={item.img} alt="" />

@@ -89,30 +89,28 @@ const SimpleButon = styled.button`
 
 `;
 
-export const Pollo = () => {
+export const Complementos = () => {
   return (
     <>
-
-      <FirstHalfHeader />
-      <SecondHalfHeader />
-      <BarraCategoriasNav />
-
-
+    <FirstHalfHeader />
+    <SecondHalfHeader /> 
+     <BarraCategoriasNav/>
+    
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
-          {data.pollo[0].tipos.map((item) => (
-            <Card>
-              <ImageContainer>
-                <img src={item.img} alt="" />
-              </ImageContainer>
-              <ContentContainer>
-                <h3 style={{ fontSize: "1.4rem", fontWeight: "100" }}>{item.nombre}</h3>
+        {data.complementos.map((item) => (
+          <Card>
+             <ImageContainer>
+             <img src={item.img} alt="" />
+                </ImageContainer>            
+            <ContentContainer>
+                <h3 style={{fontSize:"1.4rem", fontWeight:"100"}}>{item.nombre}</h3>
                 <Precio>S/. {item.precio}</Precio>
                 <Terminos>Términos y condiciones</Terminos>
                 <SimpleButon>Ver más</SimpleButon>
-              </ContentContainer>
-            </Card>
-          ))}
+            </ContentContainer>
+          </Card>
+        ))}
         </HamburguesasGridContainer>
       </CombosDeHamburguesasMainContainer>
     </>
