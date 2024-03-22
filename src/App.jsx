@@ -10,14 +10,7 @@ import { SecondHalfHeader } from "./components/Header/SecondHalfHeader";
 function App() {
   return (
     <>
-      <FirstHalfHeader />
-      <SecondHalfHeader />
-      {/* <LandingPage>
-        <MyRouters />
-
-        </LandingPage> 
-      
-
+       <MyRouters/>
     </>
   );
 }

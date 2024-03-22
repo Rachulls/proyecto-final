@@ -176,7 +176,7 @@ export const SecondHalfHeader = () =>{
     return(
         <MainContainer>
             <Image src={LogoBembos} alt="" />
-            <Router>
+            {/* <Router> */}
             <BarraNavegacion>
             <Link to="/menu">
             <ElementoContainer>
@@ -212,7 +212,7 @@ export const SecondHalfHeader = () =>{
                  </ElementoContainer>
             </Link>
             </BarraNavegacion>
-            </Router>
+            {/* </Router> */}
             <CarroContainer>
                 {/* PRIMER BOTON */}
                 <ElementoCarritoContainer style={{gap:"20px", borderRadius:"90px", backgroundColor:"#fbb905", padding: "5px", paddingLeft:"20px", paddingRight:"0px"}}>
