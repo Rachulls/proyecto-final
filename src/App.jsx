@@ -6,6 +6,7 @@ import { SideBar } from "./components/Header/SideBar";
 import { PromocionesPage } from "./pages/PromocionesPage";
 import { FirstHalfHeader } from "./components/Header/FirstHalfHeader";
 import { SecondHalfHeader } from "./components/Header/SecondHalfHeader";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
