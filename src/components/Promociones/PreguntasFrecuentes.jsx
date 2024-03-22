@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Faq from "react-faq-component";
 
 const data = {
@@ -35,21 +36,29 @@ const data = {
   ],
 };
 
+const PreguntasContainer = styled.div`
+width: 84%;
+display: flex !important;
+margin-left: 100px;
+padding-top: 30px;
+background-color: #F6F7F8;
+`;
 
 export const PreguntasFrecuentes = () => {
     
   return (
     <>
-        <Faq
+    <PreguntasContainer>
+      <Faq
           data={data}
            styles={{
             titleTextColor: "#21388b",
             rowTitleColor: "#21388b",
-            rowTitlePadding: '150px',
-            borderRadius: "5px",
-            padding: "20px",
+            bgColor: "#F6F7F8"
         }}
         />
+    </PreguntasContainer>
+        
     </>
   );
 };
