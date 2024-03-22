@@ -183,6 +183,8 @@
 				}
 			]
 		},
+		
+	
 		{
 			"preguntas": [
 				{
@@ -1302,5 +1304,41 @@
 				}
 			]
 		}
-	]
+	],
+		
+	"MenusAlPlato": [
+			{
+				"nombre": "Menú a lo pobre",
+				"precio": 18.90,
+				"id":108,
+				"img":"https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-a-lo-pobre-menu-2024.jpg",
+				"link": "menu-alo-pobre"
+			},
+			{
+				"nombre" : "Menú Taypá",
+				"precio" : 18.90,
+				"id": 109,
+				"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-taypa-menu-2024.jpg",
+				"link": "menu-taypa"
+			},
+			{
+				"nombre" : "Menú Pechugón",
+				"precio" : 16.90,
+				"id": 110,
+				"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pechugon-menu-2024.jpg",
+				"link": "menu-pechugon"
+			},
+			{
+				"nombre" : "Burger Menú",
+				"precio" : 16.90,
+				"id": 111,
+				"img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-burger-menu-2024.jpg",
+				"link": "burger-menu"
+			}
+
+
+		]
+
+
+	
 }
