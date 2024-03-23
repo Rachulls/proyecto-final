@@ -180,21 +180,21 @@ export const SecondHalfHeader = () =>{
             </ElementoContainer>
             </Link>
 
-            <Link to="/combos">
+            <Link to="/menu/combos">
              <ElementoContainer>
                 <img src={Icono2} alt="" />
                 <Parrafo style={{fontSize: "1rem"}}>COMBOS</Parrafo>
             </ElementoContainer>
             </Link>
 
-             <Link to="/promociones">
+             <Link to="/promociones/delivery-hamburguesas">
                 <ElementoContainer>
                     <img src={Icono3} alt="" />
                     <Parrafo style={{fontSize: "1rem"}}>PROMOCIONES</Parrafo>
                 </ElementoContainer>
              </Link>
              
-             <Link to="/hamburguesas">
+             <Link to="/menu/hamburguesas">
                 <ElementoContainer>
                      <img src={Icono4} alt="" />
                     <Parrafo style={{fontSize: "1rem"}}>HAMBURGUESAS</Parrafo>
