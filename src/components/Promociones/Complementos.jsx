@@ -105,7 +105,7 @@ const settingsAll = {
       settings: {
         slidesToShow: 1,
         vertical: false,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
       },
    },
 ]

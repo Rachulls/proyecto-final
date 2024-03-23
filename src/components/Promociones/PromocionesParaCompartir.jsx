@@ -162,7 +162,7 @@ const settingsAll = {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 1,
         vertical: false,
         slidesToScroll: 1,
       },

@@ -24,6 +24,9 @@ const TablaPromociones = styled.div`
     /* background: #fbb905;
     border-color: #fbb905; */
     }
+    @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 export const FiltroPromociones = () => {

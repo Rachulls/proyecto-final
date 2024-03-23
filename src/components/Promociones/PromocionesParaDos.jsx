@@ -143,6 +143,7 @@ background: url(${(props) => (props.image ? props.image : "")}) center
   }
 `;
 
+
 const settingsAll = {
   speed: 500,
   infinite: false,
@@ -161,7 +162,7 @@ const settingsAll = {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 1,
         vertical: false,
         slidesToScroll: 1,
       },
