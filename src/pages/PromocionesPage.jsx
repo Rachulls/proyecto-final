@@ -7,6 +7,7 @@ import { PreguntasFrecuentes } from "../components/Promociones/PreguntasFrecuent
 import { PromocionesParaCompartir } from "../components/Promociones/PromocionesParaCompartir"
 import { PromocionesParaDos } from "../components/Promociones/PromocionesParaDos"
 import { PromocionesPersonales } from "../components/Promociones/PromocionesPersonales"
+import {Footer} from "../components/Footer"
 
 
 export const PromocionesPage = () =>{
@@ -23,6 +24,7 @@ export const PromocionesPage = () =>{
         <Complementos/>
         <Cupones/>
         <PreguntasFrecuentes/>
+        <Footer/>
         </>
     )
 }

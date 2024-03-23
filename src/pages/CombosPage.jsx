@@ -11,6 +11,7 @@ import { Complementos } from "../components/Combos/Complementos"
 import { Bebidas } from "../components/Combos/Bebidas"
 import { Helados } from "../components/Combos/Helados"
 import { InkaChips } from "../components/Combos/InkaChips"
+import {Footer} from "../components/Footer"
 
 export const CombosPage = () =>{
     
@@ -20,6 +21,7 @@ export const CombosPage = () =>{
         <SecondHalfHeader/>
         <BarraCategoriasNav/>
         <CombosDeHamburguesas/>
+        <Footer/>
         {/* <CombosDeHamburguesas/> */}
         {/* <Hamburguesas/> */}
         {/* <MenusAlPlato/> */}
