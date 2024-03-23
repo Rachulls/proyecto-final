@@ -9,7 +9,21 @@ const CombosDeHamburguesasMainContainer = styled.section`
   margin: 0 auto;
 `;
 
-const Titulo = styled.h2``;
+const TituloContainer = styled.div`
+  color: #173083;
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 65%;
+  margin-top: 30px;
+  margin-bottom: -10px;
+  box-shadow: 0 -5px 10px 5px rgba(241, 239, 239, 0.5);
+  padding: 20px;
+
+`;
+
+const Titulo = styled.h2`
+
+`;
 
 const HamburguesasGridContainer = styled.div`
     margin: 0 auto;
@@ -18,11 +32,11 @@ const HamburguesasGridContainer = styled.div`
     gap: 7px;
     row-gap: 30px;
     background-color: #ffffff;
-    padding: 20px;
-    place-items: center;
-    margin-top: 10px;
-    box-shadow: 0 0 10px 5px rgba(241, 239, 239, 0.5); /* Color oscuro con un brillo de 0.5 */
-
+    place-items: left;
+    padding-left: 80px;
+    align-items: center;
+    padding-top: 30px;
+    box-shadow: 5px 0 10px rgba(241, 239, 239, 0.5), -5px 0 10px rgba(241, 239, 239, 0.5);
 `;
 
 const Card = styled.div`
@@ -89,14 +103,27 @@ const SimpleButon = styled.button`
 
 `;
 
+const AcordeonSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+const Pregunta = styled.details`
+
+`;
+
 export const Helados = () => {
   return (
     <>
     <FirstHalfHeader />
     <SecondHalfHeader />
     <BarraCategoriasNav/>
-    
+    <TituloContainer>
+      <Titulo>DELICIOSOS HELADOS PARA TI | BEMBOS</Titulo>
+    </TituloContainer>
       <CombosDeHamburguesasMainContainer>
+
         <HamburguesasGridContainer>
         {data.helados.map((item) => (
           <Card>
@@ -113,6 +140,29 @@ export const Helados = () => {
         ))}
         </HamburguesasGridContainer>
       </CombosDeHamburguesasMainContainer>
+      <TituloContainer style={{marginTop:"0", display:"flex", flexDirection:"column", paddingLeft:"80px", boxShadow: "0 0 10px rgb(255, 255, 255)"}}>
+          <Titulo>POSTRES HELADOS</Titulo>
+          <p style={{lineHeight:"25px", color:"black"}}>Cualquier momento es ideal para un postre helado. Conoce las variedades que tenemos en Bembos. Distintos sabores de helados, salsas y topping para que disfrutes. ¡Puedes elegir el tuyo, pedirlo online y recibirlo en tu hogar!</p>
+       </TituloContainer>
+       <TituloContainer style={{marginTop: "0", boxShadow: "0 0 10px rgb(255, 255, 255)"}}>
+        <Titulo>PREGUNTAS FRECUENTES SOBRE NUESTROS HELADOS</Titulo>
+        <AcordeonSection>
+           <Pregunta name="info" open>
+           <summary>¿Qué adicionales puedo agregarle a mi helado Bembos?</summary>
+           <p>Podrás añadir hasta 9 toppings dulces, de chocolate o maní. Elige el mejor complemente para tu helado Mini Princesa y Choco Vainilla.</p>
+           </Pregunta>
+           <Pregunta name="info" open>
+           <summary>¿Puedo comprar mi postre de helados Bembos por Delivery?</summary>
+           <p>Sí, puedes elegir y pedir tus helados por Delivery Online. Tenemos para ti el helado Mini Princesa de Vainilla o Mixta y también el helado Choco Maní. Recuerda añadir tus toppings preferidos y disfrutar de este exquisito antojo.</p>
+           </Pregunta>
+           <Pregunta name="info" open>
+           <summary>¿Qué sabores de helados Bembos existen?</summary>
+           <p>Existen dos tipos de helados en la tienda en línea de Bembos. Tenemos el Helado Mini Princesa que es un helado de vainilla o mixto con trozos de chocolate princesa y fudge de chocolate. Y también está el Choco Maní que está hecho con helado de vainilla y una delicios cobertura de chocolate derretido con maní picado.</p>
+           </Pregunta>
+       </AcordeonSection>
+       </TituloContainer>
+
+
     </>
   );
 };
