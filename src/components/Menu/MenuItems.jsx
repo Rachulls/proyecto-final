@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import data from "../../../proyecto-final/db.json";
+import data from "../../../db.json";
 
 const Container = styled.div`
   max-width: 1134px;

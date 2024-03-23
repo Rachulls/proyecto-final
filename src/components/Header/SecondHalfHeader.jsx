@@ -168,11 +168,6 @@ export const SecondHalfHeader = () =>{
         const toggleNavBar = () => {
             setMostrarNav(!mostrarNav);
           };
-    
-
-
-
- 
     return(
         <MainContainer>
             <Image src={LogoBembos} alt="" />

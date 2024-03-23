@@ -9,12 +9,18 @@ const ComplementosGeneral = styled.div`
     width: 100%;
     margin: auto;
     background-color: #F6F7F8;
+    @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 const Card = styled.div`
   padding: 0 30px;
   margin-top: 20px;
   margin-bottom: 45px;
+  @media (max-width: 900px) {
+    width: 50%;
+  }
 `;
 
 const CardImage = styled.div`
@@ -27,23 +33,34 @@ const CardImage = styled.div`
   height: 194px;
   gap: 20px;
   border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  -o-object-fit: cover;
+  max-width: 100% !important;
+  &:hover{
+      transition: all 0.4s;
+      transform: scale(1.1) translateY(-5%);
+  }
   a{
     color: #fff;
     text-decoration: underline;
     display: flex;
-    padding: 160px 29px
+    padding: 160px 29px;
       }
+      @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const CardContent = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+gap: 10px;
   max-width: 20rem;
   width: 100%;
   overflow: hidden;
   border: 1.8px solid rgb(225, 225, 225);
-  border-radius: 0 0 13px 13px;
+  border-radius: 20px;
   cursor: pointer;
   box-shadow: 4px 4px 13px rgba(209, 209, 209, 0.6);
   button {
@@ -57,40 +74,41 @@ align-items: center;
     color: #fff;
     font-size: 20px;
     line-height: 1.5;
-    font-family: din1451;
     outline: 0;
     height: 35px;
-    margin: auto;
+    margin-bottom: 20px;
     display: block;
+  }
+  @media (max-width: 900px) {
+    margin-left: 100px;
+    width: 100%;
   }
 `;
 
-const settingsCards = {
-  dots: false,
-  infinite: false,
+const settingsAll = {
   speed: 500,
-  slidesToShow: 2,
-  slidesToScroll: 2,
-  variableWidth: true,
-  swipeToSlide: false,
+  infinite: false,
+  slidesToShow: 4,
+  rows: 1,
   responsive: [
     {
       breakpoint: 992,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true,
+     settings: {
+     slidesToShow: 2,
+      rows: 1,
+      vertical: false,
+      verticalSwiping: true,
       },
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
+        vertical: false,
         slidesToScroll: 2,
-        variableWidth: false,
       },
-    },
-  ],
+   },
+]
 };
 
 export const Complementos = () => {
@@ -98,11 +116,11 @@ export const Complementos = () => {
     <>
       <ComplementosGeneral>
         <h2>Complementos:</h2>
-        <Slider {...settingsCards}>
+        <Slider {...settingsAll}>
           {data.complementos.map((item) => (
             <Card>
-              <CardImage image={item.img}><a>Términos y Condiciones</a></CardImage>
               <CardContent>
+              <CardImage image={item.img}><a>Términos y Condiciones</a></CardImage>
                 <h2>{item.nombre}</h2>
                 <h3>S/. {item.precio}</h3>
                 <button>Ver más</button>

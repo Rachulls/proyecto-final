@@ -6,16 +6,27 @@ import "slick-carousel/slick/slick-theme.css";
 import data from "../../../../proyecto-final/db.json";
 
 const OnlineProms = styled.div`
-  margin-top: 50px;
+   margin-top: 50px;
   max-width: 1134px;
-  width: 100%;
+  width: 90%;
   margin: auto;
   padding-top: 50px;
+  img{
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 const ContainerCard = styled.div`
-  padding: 0 0.4rem;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 1134px;
+  padding: 50px 0.8rem;
 `;
 
 const Card = styled.div`

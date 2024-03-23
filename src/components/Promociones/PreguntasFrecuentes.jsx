@@ -42,6 +42,10 @@ display: flex !important;
 margin-left: 100px;
 padding-top: 30px;
 background-color: #F6F7F8;
+@media (max-width: 900px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 export const PreguntasFrecuentes = () => {

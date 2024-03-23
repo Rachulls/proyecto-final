@@ -7,11 +7,17 @@ import data from "../../../../proyecto-final/db.json";
 import canje from "../../img/canje.jpg";
 
 const MenuHambsOnline = styled.div`
- margin-top: 50px;
+  margin-top: 50px;
   max-width: 1134px;
-  width: 100%;
+  width: 90%;
   margin: auto;
   padding-top: 50px;
+  img {
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 const CardMenuHamOnline = styled.div`
@@ -21,24 +27,19 @@ const CardMenuHamOnline = styled.div`
   position: relative;
   margin-bottom: 20px;
   max-width: 1134px;
-  gap: 30px;
-  padding-top: 50px;
+  padding: 50px 0.8rem;
+  
 `;
 
 const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex !important;
   align-items: center;
-  position: relative;
-  min-height: 300px;
-  width: 242.5px;
-  height: 100%;
-  transition: all 0.2s;
+  flex-direction: column;
+  border: 1px solid rgb(226, 223, 223);
+  border-radius: 20px;
+  background-color: #fff;
   cursor: pointer;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
-  border-radius: 15px;
-  background: #fff;
   overflow: hidden;
   img {
     max-height: 255px;
@@ -48,11 +49,11 @@ const Card = styled.div`
     display: flex;
     align-items: flex-end;
     object-fit: cover;
-    &:hover{
+    &:hover {
       width: 100%;
       transition: all 0.4s;
       transform: scale(1.1) translateY(-5%);
-  }
+    }
   }
 `;
 
@@ -81,7 +82,6 @@ const CardButton = styled.button`
   border-radius: 25px;
   font-size: 20px;
   line-height: 1.5;
-  font-family: din1451;
   outline: 0;
   height: 43px;
   padding-top: 5px;
@@ -109,7 +109,7 @@ const settings = {
         slidesToShow: 2,
       },
     },
-  ]
+  ],
 };
 
 export const MenuHamburguersOnline = () => {
@@ -118,20 +118,20 @@ export const MenuHamburguersOnline = () => {
       <h2>MENU DE HAMBURGUESAS ONLINE</h2>
       <Slider {...settings}>
         {data.menu.map((item) => (
-      <CardMenuHamOnline>
-          <Card>
-            <img src={item.img} />
-            <CardInfo>
-              <a href={item.link}>{item.nombre}</a>
-              <CardButton>
-                <p>VER TODOS</p>
-              </CardButton>
-            </CardInfo>
-          </Card>
-      </CardMenuHamOnline>
+          <CardMenuHamOnline>
+            <Card>
+              <img src={item.img} />
+              <CardInfo>
+                <a href={item.link}>{item.nombre}</a>
+                <CardButton>
+                  <p>VER TODOS</p>
+                </CardButton>
+              </CardInfo>
+            </Card>
+          </CardMenuHamOnline>
         ))}
       </Slider>
-      <img src={canje}/>
+      <img src={canje} />
     </MenuHambsOnline>
   );
 };
