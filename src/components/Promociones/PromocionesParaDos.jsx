@@ -8,6 +8,9 @@ max-width: 1134px;
   width: 100%;
   margin: auto;
   background-color: #f6f7f8;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 const PromocionesBody = styled.div`
@@ -61,7 +64,7 @@ padding: 13px;
   border-radius: 10px;
   width: 50%;
   h2 {
-    color: #193694;
+    /* color: #193694; */
     padding-bottom: 15px;
   }
   button{
@@ -102,6 +105,21 @@ h3{
     text-decoration: line-through;
     }
 `;
+
+const Descuento = styled.div`
+color: #fff;
+    background: #d50e0e;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    max-height: 40px;
+    line-height: 36px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 60px;
+    text-align: center;
+`;
+
 const CardImage = styled.div`
 background: url(${(props) => (props.image ? props.image : "")}) center
     no-repeat;
@@ -116,20 +134,46 @@ background: url(${(props) => (props.image ? props.image : "")}) center
   object-fit: cover;
   max-width: 100% !important;
   overflow: hidden;
+  &:hover{
+      transition: all 0.4s;
+      transform: scale(1.1) translateY(-5%);
+      ${Descuento}{
+      display: none !important;
+    }
+  }
 `;
 
 const settingsAll = {
-    speed: 500,
-    infinite: false,
-    slidesToShow: 2,
-    rows: 2,
-  };
+  speed: 500,
+  infinite: false,
+  slidesToShow: 2,
+  rows: 2,
+  responsive: [
+    {
+      breakpoint: 992,
+     settings: {
+     slidesToShow: 1,
+      rows: 1,
+      vertical: false,
+      verticalSwiping: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 6,
+        vertical: false,
+        slidesToScroll: 1,
+      },
+   },
+]
+};
  
 export const PromocionesParaDos = () => {
   return (
     <div>
       <PromocionesContainer>
-        <PromocionesBody>
+        <PromocionesBody id="parados">
           <ListaPromosParaDos>
             <img src="src\img\promo-para-2.svg" alt="" />
             <h2>Promociones para 2</h2>
@@ -139,7 +183,7 @@ export const PromocionesParaDos = () => {
               <ContainerCard>
                 <Card>
                   <CardContent>
-                    <h2>{item.nombre_azul}</h2>
+                    <h2>{item.nombre_azul} {item.nombre_negro}</h2>
                     <p>{item.descripcion}</p>
                     <Prices>
                       <h3>S/. {item.precio_actual}</h3>
@@ -147,7 +191,11 @@ export const PromocionesParaDos = () => {
                     </Prices>
                     <button>Ver más</button>
                   </CardContent>
-                  <CardImage image={item.img}></CardImage>
+                  <CardImage image={item.img}>
+                  <Descuento>
+                      -{item.descuento}%
+                    </Descuento>
+                  </CardImage>
                 </Card>
               </ContainerCard>
             ))}

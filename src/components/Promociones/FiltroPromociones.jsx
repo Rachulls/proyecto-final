@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from "styled-components";
 
 const TablaPromociones = styled.div`
@@ -6,7 +6,7 @@ const TablaPromociones = styled.div`
   display: flex;
   justify-content: center;
   padding: 17px 0 15px;
-  a {
+  button {
     border: 2px solid #e2e2e2;
     text-decoration: none;
     padding: 8px 49px 6px;
@@ -20,22 +20,27 @@ const TablaPromociones = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* a:active{
       color: #173083;
-    background: #fbb905;
-    border-color: #fbb905;
-    } */
-  }
+    /* background: #fbb905;
+    border-color: #fbb905; */
+    }
 `;
 
 export const FiltroPromociones = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       <TablaPromociones>
-        <a href="">Promociones Personales</a>
-        <a href="">Promociones para 2</a>
-        <a href="">Promociones para compartir</a>
-        <a href="">Cupones</a>
+        <button onClick={() => scrollToSection('personales')}>Promociones Personales</button>
+        <button onClick={() => scrollToSection('parados')}>Promociones para 2</button>
+        <button onClick={() => scrollToSection('compartir')}>Promociones para compartir</button>
+        <button onClick={() => scrollToSection('cupones')}>Cupones</button>
       </TablaPromociones>
     </div>
   )

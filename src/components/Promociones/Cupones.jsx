@@ -3,14 +3,17 @@ import styled from 'styled-components';
 import data from "../../../db.json";
 import Slider from "react-slick";
 
-const PromocionesContainer = styled.div`
+const CuponesContainer = styled.div`
 max-width: 1134px;
   width: 100%;
   margin: auto;
   background-color: #f6f7f8;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
-const PromocionesBody = styled.div`
+const CuponesBody = styled.div`
 h1 {
     margin: 15px 0 25px;
     color: #3b3c40;
@@ -116,20 +119,44 @@ background: url(${(props) => (props.image ? props.image : "")}) center
   object-fit: cover;
   max-width: 100% !important;
   overflow: hidden;
+  &:hover{
+      transition: all 0.4s;
+      transform: scale(1.1) translateY(-5%);
+  }
 `;
 
 const settingsAll = {
-    speed: 500,
-    infinite: false,
-    slidesToShow: 2,
-    rows: 2,
-  };
+  speed: 500,
+  infinite: false,
+  slidesToShow: 2,
+  rows: 2,
+  responsive: [
+    {
+      breakpoint: 992,
+     settings: {
+     slidesToShow: 1,
+      rows: 1,
+      vertical: false,
+      verticalSwiping: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 6,
+        vertical: false,
+        slidesToScroll: 1,
+      },
+   },
+]
+};
 
 export const Cupones = () => {
+    
   return (
     <div>
-      <PromocionesContainer>
-        <PromocionesBody>
+      <CuponesContainer>
+        <CuponesBody id="cupones">
           <ListaCupones>
             <h2>Cupones</h2>
           </ListaCupones>
@@ -152,8 +179,8 @@ export const Cupones = () => {
               </ContainerCard>
             ))}
           </Slider>
-        </PromocionesBody>
-      </PromocionesContainer>
+        </CuponesBody>
+      </CuponesContainer>
     </div>
   )
 }

@@ -1,17 +1,20 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import data from "../../../db.json";
 import Slider from "react-slick";
 
 const PromocionesContainer = styled.div`
-max-width: 1134px;
+  max-width: 1134px;
   width: 100%;
   margin: auto;
   background-color: #f6f7f8;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 const PromocionesBody = styled.div`
-h1 {
+  h1 {
     margin: 15px 0 25px;
     color: #3b3c40;
     font-size: 30px;
@@ -22,7 +25,7 @@ h1 {
 `;
 
 const ListaPromosParaCompartir = styled.div`
-display: flex;
+  display: flex;
   flex-direction: row;
   h2 {
     margin: 15px 0;
@@ -34,12 +37,12 @@ display: flex;
 `;
 
 const ContainerCard = styled.div`
-padding: 0 2rem;
+  padding: 0 2rem;
   padding-top: 30px;
 `;
 
 const Card = styled.div`
-display: flex !important;
+  display: flex !important;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
@@ -53,7 +56,7 @@ display: flex !important;
 `;
 
 const CardContent = styled.div`
-padding: 13px;
+  padding: 13px;
   margin: 0 10px;
   position: relative;
   height: 100%;
@@ -64,7 +67,7 @@ padding: 13px;
     color: #193694;
     padding-bottom: 15px;
   }
-  button{
+  button {
     width: 171px;
     max-width: 100%;
     border: none;
@@ -79,18 +82,18 @@ padding: 13px;
     margin-left: 20px;
   }
 `;
-const Prices= styled.div`
-h3{
-      font-weight: 700;
+const Prices = styled.div`
+  h3 {
+    font-weight: 700;
     color: #030819;
     font-size: 27px;
     padding: 25px 0;
     border-radius: 20px;
     display: inline-block;
     width: 50%;
-    };
-    h4{
-      position: relative;
+  }
+  h4 {
+    position: relative;
     width: 50%;
     font-size: 20px;
     color: #ec0b0b;
@@ -100,10 +103,25 @@ h3{
     margin: 4px 0 0;
     padding-top: 20px;
     text-decoration: line-through;
-    }
+  }
 `;
+
+const Descuento = styled.div`
+color: #fff;
+    background: #d50e0e;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    max-height: 40px;
+    line-height: 36px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 60px;
+    text-align: center;
+`;
+
 const CardImage = styled.div`
-background: url(${(props) => (props.image ? props.image : "")}) center
+  background: url(${(props) => (props.image ? props.image : "")}) center
     no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -111,27 +129,54 @@ background: url(${(props) => (props.image ? props.image : "")}) center
   border-radius: 0 15px 15px 0;
   height: 231px;
   width: 255px;
-  transition: all 0.4s;
   -o-object-fit: cover;
   object-fit: cover;
   max-width: 100% !important;
   overflow: hidden;
+  &:hover {
+    transition: all 0.4s;
+    transform: scale(1.1) translateY(-5%);
+    ${Descuento}{
+      display: none !important;
+    }
+  }
 `;
 
+const Terminos = styled.div``;
+
 const settingsAll = {
-    speed: 500,
-    infinite: false,
-    slidesToShow: 2,
-    rows: 2,
-  };
+  speed: 500,
+  infinite: false,
+  slidesToShow: 2,
+  rows: 2,
+  responsive: [
+    {
+      breakpoint: 992,
+     settings: {
+     slidesToShow: 1,
+      rows: 1,
+      vertical: false,
+      verticalSwiping: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 6,
+        vertical: false,
+        slidesToScroll: 1,
+      },
+   },
+]
+};
 
 export const PromocionesParaCompartir = () => {
   return (
     <div>
       <PromocionesContainer>
-        <PromocionesBody>
+        <PromocionesBody id="compartir">
           <ListaPromosParaCompartir>
-            <img src="src\img\promo-compartir.svg" alt="" />
+            <img src="src\img\promo-compartir.svg" />
             <h2>Promociones para compartir</h2>
           </ListaPromosParaCompartir>
           <Slider {...settingsAll}>
@@ -139,7 +184,9 @@ export const PromocionesParaCompartir = () => {
               <ContainerCard>
                 <Card>
                   <CardContent>
-                    <h2>{item.nombre_azul}</h2>
+                    <h2>
+                      {item.nombre_azul} {item.nombre_negro}
+                    </h2>
                     <p>{item.descripcion}</p>
                     <Prices>
                       <h3>S/. {item.precio_actual}</h3>
@@ -147,7 +194,15 @@ export const PromocionesParaCompartir = () => {
                     </Prices>
                     <button>Ver más</button>
                   </CardContent>
-                  <CardImage image={item.img}></CardImage>
+                  <CardImage image={item.img}>
+                    <Descuento>
+                    -{item.descuento}%
+                    </Descuento>
+                    <Terminos>
+                      {item.terminos_blanco}
+                      {item.terminos_negro}
+                    </Terminos>
+                  </CardImage>
                 </Card>
               </ContainerCard>
             ))}
@@ -155,6 +210,5 @@ export const PromocionesParaCompartir = () => {
         </PromocionesBody>
       </PromocionesContainer>
     </div>
-  )
-}
-
+  );
+};

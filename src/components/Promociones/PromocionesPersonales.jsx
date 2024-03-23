@@ -10,6 +10,9 @@ const PromocionesContainer = styled.div`
   width: 100%;
   margin: auto;
   background-color: #f6f7f8;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 const PromocionesBody = styled.div`
@@ -105,6 +108,20 @@ const Prices = styled.div`
     }
 `;
 
+const Descuento = styled.div`
+color: #fff;
+    background: #d50e0e;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    max-height: 40px;
+    line-height: 36px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 60px;
+    text-align: center;
+`;
+
 const CardImage = styled.div`
   background: url(${(props) => (props.image ? props.image : "")}) center
     no-repeat;
@@ -119,42 +136,51 @@ const CardImage = styled.div`
   object-fit: cover;
   max-width: 100% !important;
   overflow: hidden;
+  &:hover{
+      transition: all 0.4s;
+      transform: scale(1.1) translateY(-5%);
+      ${Descuento}{
+      display: none !important;
+    }
+  }
 `;
+
+
 
 const settingsAll = {
   speed: 500,
   infinite: false,
   slidesToShow: 2,
   rows: 2,
+  responsive: [
+    {
+      breakpoint: 992,
+     settings: {
+     slidesToShow: 1,
+      rows: 1,
+      vertical: false,
+      verticalSwiping: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 6,
+        vertical: false,
+        slidesToScroll: 1,
+      },
+   },
+]
 };
 
-// const settingsResponsive = [
-//   {
-//     breakpoint: 992,
-//     settings: {
-//     slidesToShow: 1,
-//     rows: 1,
-//     vertical: true,
-//     verticalSwiping: true,
-//     },
-//   },
-//   {
-//     breakpoint: 600,
-//     settings: {
-//     slidesToShow: 1,
-//     rows: 1,
-//     vertical: true,
-//     verticalSwiping: true,
-//     },
-//   },
-// ];
+
 
 export const PromocionesPersonales = () => {
   return (
     <div>
       
       <PromocionesContainer>
-        <PromocionesBody>
+        <PromocionesBody id="personales">
           <h1>PROMOCIONES DE HAMBURGUESAS PARA TI CON DELIVERY</h1>
           <ListaPromosPersonales>
             <img src="src\img\user-blackb.svg" alt="" />
@@ -173,7 +199,11 @@ export const PromocionesPersonales = () => {
                     </Prices>
                     <button>Ver más</button>
                   </CardContent>
-                  <CardImage image={item.img}></CardImage>
+                  <CardImage image={item.img}>
+                  <Descuento>
+                  -{item.descuento}%
+                    </Descuento>
+                  </CardImage>
                 </Card>
               </ContainerCard>
             ))}
