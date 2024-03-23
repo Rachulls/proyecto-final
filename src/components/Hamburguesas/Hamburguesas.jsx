@@ -92,9 +92,6 @@ const SimpleButon = styled.button`
 export const Hamburguesas = () => {
   return (
     <>
-      <FirstHalfHeader/>
-        <SecondHalfHeader/>
-        <BarraCategoriasNav/>
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
         {data.hamburguesas.map((item) => (
