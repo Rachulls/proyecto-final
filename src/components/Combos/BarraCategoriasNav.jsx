@@ -24,33 +24,33 @@ export const BarraCategoriasNav = () => {
     return (
         <>
             <NavMainContainer>
-                <Link to="/combos">
+                <Link to="/menu/combos">
                      <Enlace>COMBOS</Enlace>
                 </Link>
-                <Link to="/combos/hamburguesas">
+                <Link to="/menu/hamburguesas">
                     <Enlace>HAMBURGUESAS</Enlace>
                 </Link>
-                <Link to="/combos/pollo">
+                <Link to="/menu/pollo">
                     <Enlace>POLLO</Enlace>
                 </Link>
-                <Link to="/combos/menus-al-plato">
+                <Link to="/menu/menus-al-plato">
                     <Enlace>MENÚS AL PLATO</Enlace>
                 </Link>
-                <Link to="/combos/loncheritas">
+                <Link to="/menu/loncheritas">
                     <Enlace>LONCHERITAS</Enlace>
                 </Link>
 
-                <Link to="/combos/complementos">
+                <Link to="/menu/complementos">
                     <Enlace>COMPLEMENTOS</Enlace>
                 </Link>
 
-                <Link to="/combos/bebidas">
+                <Link to="/menu/bebidas">
                     <Enlace>BEBIDAS</Enlace>
                 </Link>
-                <Link to="/combos/helados">
+                <Link to="/menu/helados">
                     <Enlace>HELADOS</Enlace>
                 </Link>
-                <Link to="/combos/inka-chips">
+                <Link to="/menu/inka-chips">
                     <Enlace>INKA CHIPS</Enlace>
 
                 </Link>

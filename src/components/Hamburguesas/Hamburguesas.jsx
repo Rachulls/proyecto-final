@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import data from "../:./../../../db.json";
-import { FirstHalfHeader } from "../Header/FirstHalfHeader";
-import { SecondHalfHeader } from "../Header/SecondHalfHeader";
-import { BarraCategoriasNav } from "./BarraCategoriasNav";
 
 const CombosDeHamburguesasMainContainer = styled.section`
   width: 65%;

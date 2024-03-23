@@ -2,12 +2,12 @@ import { FirstHalfHeader } from "../components/Header/FirstHalfHeader"
 import { SecondHalfHeader } from "../components/Header/SecondHalfHeader"
 import { Complementos } from "../components/Promociones/Complementos"
 import { Cupones } from "../components/Promociones/Cupones"
-import { FiltroPromociones } from "../components/Promociones/FiltroPromociones"
 import { PreguntasFrecuentes } from "../components/Promociones/PreguntasFrecuentes"
 import { PromocionesParaCompartir } from "../components/Promociones/PromocionesParaCompartir"
 import { PromocionesParaDos } from "../components/Promociones/PromocionesParaDos"
 import { PromocionesPersonales } from "../components/Promociones/PromocionesPersonales"
 import {Footer} from "../components/Footer"
+import { OptionsProm } from "../components/Promociones/OptionsProm"
 
 
 export const PromocionesPage = () =>{
@@ -15,7 +15,7 @@ export const PromocionesPage = () =>{
         <>
         <FirstHalfHeader/>
         <SecondHalfHeader/>
-        <FiltroPromociones/>
+        <OptionsProm/>
         <PromocionesPersonales/>
         <Complementos/>
         <PromocionesParaDos/>

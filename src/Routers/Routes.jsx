@@ -21,20 +21,20 @@ export function MyRouters() {
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/menu" element={<MenuPage />}></Route>
-        <Route path="/combos" element={<CombosPage />}></Route>
-        <Route path="/promociones" element={<PromocionesPage />}></Route>
-        <Route path="/hamburguesas" element={<HamburguesasPage />}></Route>
+        <Route path="/menu/combos" element={<CombosPage />}></Route>
+        <Route path="/promociones/delivery-hamburguesas" element={<PromocionesPage />}></Route>
+        <Route path="/menu/hamburguesas" element={<HamburguesasPage />}></Route>
         <Route path="/beneficios" element={<BeneficiosPage />}></Route>
 
         {/* SUB RUTAS DE  LA PÁGINA COMBOS */}
-        <Route path="/combos/hamburguesas" element={<Hamburguesas />}></Route>
-        <Route path="/combos/bebidas" element={<Bebidas />}></Route>
-        <Route path="/combos/pollo" element={<Pollo />}></Route>
-        <Route path="/combos/menus-al-plato" element={<MenusAlPlato />}></Route>
-        <Route path="/combos/loncheritas" element={<Loncheritas />}></Route>
-        <Route path="/combos/complementos" element={<Complementos />}></Route>
-        <Route path="/combos/helados" element={<Helados />}></Route>
-        <Route path="/combos/inka-chips" element={<InkaChips />}></Route>
+        <Route path="/menu/hamburguesas" element={<Hamburguesas />}></Route>
+        <Route path="/menu/bebidas" element={<Bebidas />}></Route>
+        <Route path="/menu/pollo" element={<Pollo />}></Route>
+        <Route path="/menu/menus-al-plato" element={<MenusAlPlato />}></Route>
+        <Route path="/menu/loncheritas" element={<Loncheritas />}></Route>
+        <Route path="/menu/complementos" element={<Complementos />}></Route>
+        <Route path="/menu/helados" element={<Helados />}></Route>
+        <Route path="/menu/inka-chips" element={<InkaChips />}></Route>
 
       </Routes>
     </BrowserRouter>

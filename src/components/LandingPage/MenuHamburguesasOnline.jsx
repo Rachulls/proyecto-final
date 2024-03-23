@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import data from "../../../../proyecto-final/db.json";
 import canje from "../../img/canje.jpg";
+import { Link } from "react-router-dom";
 
 const MenuHambsOnline = styled.div`
   margin-top: 50px;
@@ -28,7 +29,6 @@ const CardMenuHamOnline = styled.div`
   margin-bottom: 20px;
   max-width: 1134px;
   padding: 50px 0.8rem;
-  
 `;
 
 const Card = styled.div`
@@ -119,16 +119,18 @@ export const MenuHamburguersOnline = () => {
       <Slider {...settings}>
         {data.menu.map((item) => (
           <CardMenuHamOnline>
-            <Card>
-              <img src={item.img} />
-              <CardInfo>
-                <a href={item.link}>{item.nombre}</a>
-                <CardButton>
-                  <p>VER TODOS</p>
-                </CardButton>
-              </CardInfo>
-            </Card>
-          </CardMenuHamOnline>
+              <Link to={item.link} key={item.nombre}>
+              <Card>
+                <img src={item.img} />
+                <CardInfo>
+                  <a>{item.nombre}</a>
+                  <CardButton>
+                    <p>VER TODOS</p>
+                  </CardButton>
+                </CardInfo>
+              </Card>
+          </Link>
+            </CardMenuHamOnline>
         ))}
       </Slider>
       <img src={canje} />
