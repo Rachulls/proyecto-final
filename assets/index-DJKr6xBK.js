@@ -891,17 +891,19 @@ gap: 10px;
   color: #173083;
   font-size: 1.8rem;
 `,sS=v.div`
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid de 3 columnas que se ajustan al tamaño del contenedor */
-    gap: 7px;
-    row-gap: 30px;
-    background-color: #ffffff;
-    padding: 20px;
-    place-items: center;
-    margin-top: 10px;
-    box-shadow: 0 0 10px 5px rgba(241, 239, 239, 0.5); /* Color oscuro con un brillo de 0.5 */
-
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Grid de 3 columnas que se ajustan al tamaño del contenedor */
+  gap: 7px;
+  row-gap: 30px;
+  background-color: #ffffff;
+  padding: 20px;
+  place-items: center;
+  margin-top: 10px;
+  box-shadow: 0 0 10px 5px rgba(241, 239, 239, 0.5); /* Color oscuro con un brillo de 0.5 */
 `,uS=v.div`
   display: flex;
   flex-direction: column;
@@ -913,7 +915,7 @@ gap: 10px;
   box-shadow: 0 0 10px 5px rgba(192, 190, 190, 0.5); /* Color oscuro con un brillo de 0.5 */
   padding-bottom: 20px;
 
-  img{
+  img {
     width: 100%;
     height: 255px;
     object-fit: cover;
@@ -922,52 +924,53 @@ gap: 10px;
     transition: transform 0.4s, transform-origin 0.4s; /* Agregar transición para la propiedad transform y transform-origin */
     cursor: pointer;
 
-    &:hover{
-        transform: scale(1.1) translateY(-5%);
-    transform-origin: center center;
-    }}`,cS=v.div`
+    &:hover {
+      transform: scale(1.1) translateY(-5%);
+      transform-origin: center center;
+    }
+  }
+`,cS=v.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
   align-items: center;
 `,dS=v.div`
-    width: 100%;
-    overflow: hidden;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 `,pS=v.p`
-    font-size: 1.6rem;
-    font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 700;
 `,fS=v.p`
-    font-weight: 700;
-    white-space: nowrap;
-    text-decoration: underline;
-    cursor: pointer;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: underline;
+  cursor: pointer;
 `,mS=v.button`
-    background-color: #173083;
-    border: 0;
-    padding: 10px;
-    color: #ffff;
-    border-radius: 90px;
-    font-size: 1.1rem;
-    width: 80%;
-    cursor: pointer;
-
+  background-color: #173083;
+  border: 0;
+  padding: 10px;
+  color: #ffff;
+  border-radius: 90px;
+  font-size: 1.1rem;
+  width: 80%;
+  cursor: pointer;
 `,hS={title:"PREGUNTAS FRECUENTES SOBRE NUESTRAS HAMBURGUESAS",rows:[{title:"¿Cuántos puntos recibo por comprar una hamburguesa online delivery?",content:"Los puntos que se reciben por la compra de algún producto de nuestra carta de hamburguesas varían entorno al tamaño de la misma, en proporción se otorga un punto por cada S/1. Conoce tus puntos desde la APP o ingresando en la Web."},{title:"¿De qué están hechas las hamburguesas a la parrilla de Bembos?",content:"Nuestras hamburguesas Bembos están hechas de carnes de res junto a los más exquisitos ingredientes peruanos."},{title:"¿Las hamburguesas delivery de Bembos están acompañadas de papas fritas?",content:"Sí, Puedes hacer tu pedido de hamburguesas online y podrás comprarla únicamente sola o con papas fritas, incluso puedes pedirlo en combo (Papas+Gaseosa de 500ml)"},{title:"¿Qué adicionales tienen las hamburguesas a la parrilla de Bembos?",content:"Los adicionales que tiene nuestra carta de hamburguesas varían según la elección del usuario, entre estos tenemos: Plátano, huevo, queso, tocino, papas al hilo y las más exquisitas salsas peruanas."}]},ap=v.div`
-width: 100%;
-display: flex !important;
-margin-left: 100px;
-padding-left: 10px;
-padding-top: 30px;
-background-color: #ffffff;
-margin: 0 auto;
+  width: 100%;
+  display: flex !important;
+  margin-left: 100px;
+  padding-left: 10px;
+  padding-top: 30px;
+  background-color: #ffffff;
+  margin: 0 auto;
 
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
     width: 100%;
     margin: 0;
   }
-`,gS=()=>l.jsxs(l.Fragment,{children:[l.jsx(et,{}),l.jsx(tt,{}),l.jsx(Ut,{}),l.jsxs(aS,{children:[l.jsx(sS,{children:we.hamburguesas.map(e=>l.jsxs(uS,{children:[l.jsx(dS,{children:l.jsx("img",{src:e.img,alt:""})}),l.jsxs(cS,{children:[l.jsx("h3",{style:{fontSize:"1.4rem",fontWeight:"100"},children:e.nombre}),l.jsxs(pS,{children:["S/. ",e.precio]}),l.jsx(fS,{children:"Términos y condiciones"}),l.jsx(mS,{children:"Ver más"})]})]}))}),l.jsxs(ap,{style:{flexDirection:"column"},children:[l.jsx(lS,{children:"HAMBURGUESAS A LA PARRILLA"}),l.jsx("p",{style:{lineHeight:"25px",color:"black"},children:"Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego para otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla con los mejores ingredientes que hemos elegido para ti: tocino, plátano, tomate, lechuga, huevo, queso y mucho más. ¡No esperes más y empieza a disfrutar de lo mejor del sabor peruano!"})]}),l.jsx(ap,{children:l.jsx(In,{data:hS,styles:{titleTextColor:"#21388b",rowTitleColor:"#21388b",bgColor:"#ffffff",arrowColor:"red"}})})]})]}),vS=v.section`
+`,gS=()=>l.jsxs(l.Fragment,{children:[l.jsx(et,{}),l.jsx(tt,{}),l.jsx(Ut,{}),l.jsxs(aS,{children:[l.jsx(sS,{children:we.hamburguesas.map(e=>l.jsxs(uS,{children:[l.jsx(dS,{children:l.jsx("img",{src:e.img,alt:""})}),l.jsxs(cS,{children:[l.jsx("h3",{style:{fontSize:"1.4rem",fontWeight:"100"},children:e.nombre}),l.jsxs(pS,{children:["S/. ",e.precio]}),l.jsx(fS,{children:"Términos y condiciones"}),l.jsx(mS,{children:"Ver más"})]})]}))}),l.jsxs(ap,{style:{flexDirection:"column"},children:[l.jsx(lS,{children:"HAMBURGUESAS A LA PARRILLA"}),l.jsx("p",{style:{lineHeight:"25px",color:"black"},children:"Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego para otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla con los mejores ingredientes que hemos elegido para ti: tocino, plátano, tomate, lechuga, huevo, queso y mucho más. ¡No esperes más y empieza a disfrutar de lo mejor del sabor peruano!"})]}),l.jsx(ap,{children:l.jsx(In,{data:hS,styles:{titleTextColor:"#21388b",rowTitleColor:"#21388b",bgColor:"#F6F7F8",arrowColor:"red"}})})]})]}),vS=v.section`
   width: 65%;
   margin: 0 auto;
 `,yS=v.h2`
@@ -2068,6 +2071,7 @@ color: #fff;
 `,A3={speed:500,infinite:!1,slidesToShow:2,rows:2,responsive:[{breakpoint:992,settings:{slidesToShow:1,rows:1,vertical:!1,verticalSwiping:!0}},{breakpoint:600,settings:{slidesToShow:1,vertical:!1,slidesToScroll:1}}]},O3=()=>l.jsx("div",{children:l.jsx(x3,{children:l.jsxs(b3,{id:"personales",children:[l.jsx("h1",{children:"PROMOCIONES DE HAMBURGUESAS PARA TI CON DELIVERY"}),l.jsxs(S3,{children:[l.jsx("img",{src:"src\\img\\user-blackb.svg",alt:""}),l.jsx("h2",{children:"Promociones Personales"})]}),l.jsx(Ft,{...A3,children:we.promociones_personales.map(e=>l.jsx(j3,{children:l.jsxs(C3,{children:[l.jsxs(_3,{children:[l.jsx("h2",{children:e.nombre}),l.jsx("p",{children:e.descripcion}),l.jsxs(k3,{children:[l.jsxs("h3",{children:["S/. ",e.precio_actual]}),l.jsxs("h4",{children:["S/. ",e.precio_antiguo]})]}),l.jsx("button",{children:"Ver más"})]}),l.jsx(E3,{image:e.img,children:l.jsxs(cg,{children:["-",e.descuento,"%"]})})]})}))})]})})}),P3=v.div`
   background: #fff;
   display: flex;
+  justify-content: space-around;
   padding: 17px 0 15px;
   overflow-x: scroll;
 `,z3=v.div`
