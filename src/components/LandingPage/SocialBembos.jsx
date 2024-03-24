@@ -67,16 +67,16 @@ export const SocialBembos = () => {
           <br />
           <h4>BEMBOS</h4>
           <p>Compartir en:</p>
-          <a href="https://twitter.com/BembosOficial">
-            <img src={Tw} alt="" />
+          <a href="https://twitter.com/BembosOficial" target="_blank">
+            <img src={Tw}/>
           </a>
-          <a href="https://facebook.com/bembos/">
-            <img src={Fb} alt="" />
+          <a href="https://facebook.com/bembos/" target="_blank" >
+            <img src={Fb}/>
           </a>
         </ContentLeft>
         <ContentRight>
           <a href="https://www.facebook.com/bembos/" target="_blank">
-            <img src={Bmbs} />
+            <img src={Bmbs}/>
           </a>
         </ContentRight>
       </SocialContainer>
