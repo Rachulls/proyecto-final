@@ -3,13 +3,17 @@ import data from "../:./../../../db.json";
 import { FirstHalfHeader } from "../Header/FirstHalfHeader";
 import { SecondHalfHeader } from "../Header/SecondHalfHeader";
 import { BarraCategoriasNav } from "./BarraCategoriasNav";
+import Faq from "react-faq-component";
 
 const CombosDeHamburguesasMainContainer = styled.section`
   width: 65%;
   margin: 0 auto;
 `;
 
-const Titulo = styled.h2``;
+const Titulo = styled.h2`
+  color: #173083;
+  font-size: 1.8rem;
+`;
 
 const HamburguesasGridContainer = styled.div`
     margin: 0 auto;
@@ -89,6 +93,54 @@ const SimpleButon = styled.button`
 
 `;
 
+const datos = {
+
+  title: "PREGUNTAS FRECUENTES SOBRE NUESTRAS HAMBURGUESAS",
+
+
+  rows: [
+    {
+      title:
+        "¿Cuántos puntos recibo por comprar una hamburguesa online delivery?",
+      content:
+        "Los puntos que se reciben por la compra de algún producto de nuestra carta de hamburguesas varían entorno al tamaño de la misma, en proporción se otorga un punto por cada S/1. Conoce tus puntos desde la APP o ingresando en la Web.",
+    },
+    {
+      title:
+        "¿De qué están hechas las hamburguesas a la parrilla de Bembos?",
+      content:
+        "Nuestras hamburguesas Bembos están hechas de carnes de res junto a los más exquisitos ingredientes peruanos.",
+    },
+    {
+      title: "¿Las hamburguesas delivery de Bembos están acompañadas de papas fritas?",
+      content:
+        "Sí, Puedes hacer tu pedido de hamburguesas online y podrás comprarla únicamente sola o con papas fritas, incluso puedes pedirlo en combo (Papas+Gaseosa de 500ml)",
+    },
+    {
+      title: "¿Qué adicionales tienen las hamburguesas a la parrilla de Bembos?",
+      content:
+        "Los adicionales que tiene nuestra carta de hamburguesas varían según la elección del usuario, entre estos tenemos: Plátano, huevo, queso, tocino, papas al hilo y las más exquisitas salsas peruanas.",
+    },
+
+  ],
+};
+
+const PreguntasContainer = styled.div`
+width: 100%;
+display: flex !important;
+margin-left: 100px;
+padding-left: 10px;
+padding-top: 30px;
+background-color: #ffffff;
+margin: 0 auto;
+
+@media (max-width: 900px) {
+    width: 100%;
+    margin: 0;
+  }
+`;
+
+
 export const Hamburguesas = () => {
   return (
     <>
@@ -110,7 +162,30 @@ export const Hamburguesas = () => {
             </ContentContainer>
           </Card>
         ))}
+        
         </HamburguesasGridContainer>
+        <PreguntasContainer style={{flexDirection: "column"}}>
+        <Titulo>
+            HAMBURGUESAS A LA PARRILLA
+          </Titulo>
+          <p style={{lineHeight:"25px", color:"black"}}>Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego para otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla con los mejores ingredientes que hemos elegido para ti: tocino, plátano, tomate, lechuga, huevo, queso y mucho más. ¡No esperes más y empieza a disfrutar de lo mejor del sabor peruano!</p>
+        </PreguntasContainer>
+      
+
+          
+        <PreguntasContainer>
+      <Faq
+          data={datos}
+           styles={{
+            titleTextColor: "#21388b",
+            rowTitleColor: "#21388b",
+            bgColor: "#ffffff",
+            arrowColor: "red",
+
+          }}
+        />
+    </PreguntasContainer>
+
       </CombosDeHamburguesasMainContainer>
     </>
   );

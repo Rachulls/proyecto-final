@@ -3,6 +3,8 @@ import data from "../:./../../../db.json";
 import { FirstHalfHeader } from "../Header/FirstHalfHeader";
 import { SecondHalfHeader } from "../Header/SecondHalfHeader";
 import { BarraCategoriasNav } from "./BarraCategoriasNav";
+import Faq from "react-faq-component";
+
 
 const CombosDeHamburguesasMainContainer = styled.section`
   width: 65%;
@@ -22,7 +24,6 @@ const TituloContainer = styled.div`
 `;
 
 const Titulo = styled.h2`
-
 `;
 
 const HamburguesasGridContainer = styled.div`
@@ -103,17 +104,47 @@ const SimpleButon = styled.button`
 
 `;
 
-const AcordeonSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+const PreguntasContainer = styled.div`
+width: 84%;
+display: flex !important;
+margin-left: 100px;
+padding-top: 30px;
+background-color: #ffffff;
+@media (max-width: 900px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
-const Pregunta = styled.details`
+const datos = {
 
-`;
+  rows: [
+    {
+      title:
+        "¿Qué adicionales puedo agregarle a mi helado Bembos?",
+      content:
+        "Podrás añadir hasta 9 toppings dulces, de chocolate o maní. Elige el mejor complemente para tu helado Mini Princesa y Choco Vainilla.",
+    },
+    {
+      title:
+        "¿Puedo comprar mi postre de helados Bembos por Delivery?",
+      content:
+        "Sí, puedes elegir y pedir tus helados por Delivery Online. Tenemos para ti el helado Mini Princesa de Vainilla o Mixta y también el helado Choco Maní. Recuerda añadir tus toppings preferidos y disfrutar de este exquisito antojo.",
+    },
+    {
+      title: "¿Qué sabores de helados Bembos existen?",
+      content:
+        "Existen dos tipos de helados en la tienda en línea de Bembos. Tenemos el Helado Mini Princesa que es un helado de vainilla o mixto con trozos de chocolate princesa y fudge de chocolate. Y también está el Choco Maní que está hecho con helado de vainilla y una delicios cobertura de chocolate derretido con maní picado.",
+    },
+
+  ],
+};
+
 
 export const Helados = () => {
+
+
   return (
     <>
     <FirstHalfHeader />
@@ -144,22 +175,19 @@ export const Helados = () => {
           <Titulo>POSTRES HELADOS</Titulo>
           <p style={{lineHeight:"25px", color:"black"}}>Cualquier momento es ideal para un postre helado. Conoce las variedades que tenemos en Bembos. Distintos sabores de helados, salsas y topping para que disfrutes. ¡Puedes elegir el tuyo, pedirlo online y recibirlo en tu hogar!</p>
        </TituloContainer>
-       <TituloContainer style={{marginTop: "0", boxShadow: "0 0 10px rgb(255, 255, 255)"}}>
+       <TituloContainer style={{marginTop: "0", boxShadow: "0 0 10px rgb(255, 255, 255)", display:"flex", flexDirection:"column", justifyContent: "center", alignItems:"center"}}>
         <Titulo>PREGUNTAS FRECUENTES SOBRE NUESTROS HELADOS</Titulo>
-        <AcordeonSection>
-           <Pregunta name="info" open>
-           <summary>¿Qué adicionales puedo agregarle a mi helado Bembos?</summary>
-           <p>Podrás añadir hasta 9 toppings dulces, de chocolate o maní. Elige el mejor complemente para tu helado Mini Princesa y Choco Vainilla.</p>
-           </Pregunta>
-           <Pregunta name="info" open>
-           <summary>¿Puedo comprar mi postre de helados Bembos por Delivery?</summary>
-           <p>Sí, puedes elegir y pedir tus helados por Delivery Online. Tenemos para ti el helado Mini Princesa de Vainilla o Mixta y también el helado Choco Maní. Recuerda añadir tus toppings preferidos y disfrutar de este exquisito antojo.</p>
-           </Pregunta>
-           <Pregunta name="info" open>
-           <summary>¿Qué sabores de helados Bembos existen?</summary>
-           <p>Existen dos tipos de helados en la tienda en línea de Bembos. Tenemos el Helado Mini Princesa que es un helado de vainilla o mixto con trozos de chocolate princesa y fudge de chocolate. Y también está el Choco Maní que está hecho con helado de vainilla y una delicios cobertura de chocolate derretido con maní picado.</p>
-           </Pregunta>
-       </AcordeonSection>
+        <PreguntasContainer>
+      <Faq
+          data={datos}
+           styles={{
+            titleTextColor: "#21388b",
+            rowTitleColor: "#21388b",
+            bgColor: "#ffffff",
+            arrowColor: "red",
+          }}
+        />
+    </PreguntasContainer>
        </TituloContainer>
 
 

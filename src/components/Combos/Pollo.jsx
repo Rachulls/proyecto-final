@@ -3,13 +3,18 @@ import data from "../:./../../../db.json";
 import { FirstHalfHeader } from "../Header/FirstHalfHeader";
 import { SecondHalfHeader } from "../Header/SecondHalfHeader";
 import { BarraCategoriasNav } from "./BarraCategoriasNav";
+import Faq from "react-faq-component";
+
 
 const CombosDeHamburguesasMainContainer = styled.section`
   width: 65%;
   margin: 0 auto;
 `;
 
-const Titulo = styled.h2``;
+const Titulo = styled.h2`
+  color: #173083;
+  font-size: 1.8rem;
+`;
 
 const HamburguesasGridContainer = styled.div`
     margin: 0 auto;
@@ -89,6 +94,48 @@ const SimpleButon = styled.button`
 
 `;
 
+const datos = {
+
+  title: "PREGUNTAS FRECUENTES SOBRE NUESTROS SANDWICHES DE POLLO",
+
+  rows: [
+    {
+      title:
+        "¿Qué adicionales puedo agregarle a mi helado Bembos?",
+      content:
+        "Podrás añadir hasta 9 toppings dulces, de chocolate o maní. Elige el mejor complemente para tu helado Mini Princesa y Choco Vainilla.",
+    },
+    {
+      title:
+        "¿Puedo comprar mi postre de helados Bembos por Delivery?",
+      content:
+        "Sí, puedes elegir y pedir tus helados por Delivery Online. Tenemos para ti el helado Mini Princesa de Vainilla o Mixta y también el helado Choco Maní. Recuerda añadir tus toppings preferidos y disfrutar de este exquisito antojo.",
+    },
+    {
+      title: "¿Qué sabores de helados Bembos existen?",
+      content:
+        "Existen dos tipos de helados en la tienda en línea de Bembos. Tenemos el Helado Mini Princesa que es un helado de vainilla o mixto con trozos de chocolate princesa y fudge de chocolate. Y también está el Choco Maní que está hecho con helado de vainilla y una delicios cobertura de chocolate derretido con maní picado.",
+    },
+
+  ],
+};
+
+const PreguntasContainer = styled.div`
+width: 100%;
+display: flex !important;
+margin-left: 100px;
+padding-left: 10px;
+padding-top: 30px;
+background-color: #ffffff;
+margin: 0 auto;
+
+@media (max-width: 900px) {
+    width: 100%;
+    margin: 0;
+  }
+`;
+
+
 export const Pollo = () => {
   return (
     <>
@@ -114,6 +161,25 @@ export const Pollo = () => {
             </Card>
           ))}
         </HamburguesasGridContainer>
+        <PreguntasContainer style={{flexDirection: "column"}}>
+        <Titulo>
+        SÁNDWICHES Y HAMBURGUESAS DE POLLO
+          </Titulo>
+          <p style={{lineHeight:"25px", color:"black"}}>En Bembos no solamente tenemos hamburguesas de carne, también tenemos hamburguesas y sándwiches de pollo broaster y grill. Tenemos las mejores combinaciones de ingredientes que hacen que nuestras hamburguesas tengan un sabor irresistible. Pídelas por delivery web y empieza a disfrutar de lo mejor en hamburguesas y sándwiches de Bembos.</p>
+        </PreguntasContainer>
+        <PreguntasContainer>
+      <Faq
+          data={datos}
+           styles={{
+            titleTextColor: "#21388b",
+            rowTitleColor: "#21388b",
+            bgColor: "#ffffff",
+            arrowColor: "red",
+
+          }}
+        />
+    </PreguntasContainer>
+
       </CombosDeHamburguesasMainContainer>
     </>
   );

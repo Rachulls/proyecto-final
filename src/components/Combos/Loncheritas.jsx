@@ -3,13 +3,17 @@ import data from "../:./../../../db.json";
 import { FirstHalfHeader } from "../Header/FirstHalfHeader";
 import { SecondHalfHeader } from "../Header/SecondHalfHeader";
 import { BarraCategoriasNav } from "./BarraCategoriasNav";
+import Faq from "react-faq-component";
 
 const CombosDeHamburguesasMainContainer = styled.section`
   width: 65%;
   margin: 0 auto;
 `;
 
-const Titulo = styled.h2``;
+const Titulo = styled.h2`
+  color: #173083;
+  font-size: 1.8rem;
+`;
 
 const HamburguesasGridContainer = styled.div`
     margin: 0 auto;
@@ -89,29 +93,93 @@ const SimpleButon = styled.button`
 
 `;
 
+const datos = {
+
+  title: "PREGUNTAS FRECUENTES SOBRE LAS LONCHERITAS",
+
+  rows: [
+    {
+      title:
+        "¿Hay delivery de Loncheritas Bembos?",
+      content:
+        "Sí, elige la loncherita de tu preferencia comprando por delivery online. Y disfruta de un pack con la mejor hamburguesa a la parrilla o nuggets. Incluye papas fritas y bebida.",
+    },
+    {
+      title:
+        "¿Qué productos tienen las loncheritas Bembos?",
+      content:
+        "Hay 3 alternativas: Loncherita Básica, Loncherita Nuggets y Loncherita básica de pollo. Todas incluyen papitas fritas, salsas exquisitas y una bebida a tu preferencia. Disfruta dnuestras famosas Loncheritas para tus niños.",
+    },
+    {
+      title: "¿Qué son las loncheritas Bembos?",
+      content:
+        "Las Loncheritas de Bembos son una divertida opción para los pequeños. Elige tu pack favorito que incluye papitas fritas y bebida, tienes la opción de elegir alguna Hamburguesa a la parrilla o deliciosos nuggets.",
+    },
+
+  ],
+};
+
+    const PreguntasContainer = styled.div`
+    width: 100%;
+    display: flex !important;
+    margin-left: 100px;
+    padding-left: 10px;
+    padding-top: 30px;
+    background-color: #ffffff;
+    margin: 0 auto;
+
+    @media (max-width: 900px) {
+        width: 100%;
+        margin: 0;
+      }
+    `;
+
+
+
 export const Loncheritas = () => {
   return (
     <>
-    <FirstHalfHeader />
-    <SecondHalfHeader />
-   <BarraCategoriasNav/>
-    
+      <FirstHalfHeader />
+      <SecondHalfHeader />
+      <BarraCategoriasNav />
+
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
-        {data.loncheritas[0].tipos.map((item) => (
-          <Card>
-             <ImageContainer>
-             <img src={item.img} alt="" />
-                </ImageContainer>            
-            <ContentContainer>
-                <h3 style={{fontSize:"1.4rem", fontWeight:"100"}}>{item.nombre}</h3>
+          {data.loncheritas[0].tipos.map((item) => (
+            <Card>
+              <ImageContainer>
+                <img src={item.img} alt="" />
+              </ImageContainer>
+              <ContentContainer>
+                <h3 style={{ fontSize: "1.4rem", fontWeight: "100" }}>{item.nombre}</h3>
                 <Precio>S/. {item.precio}</Precio>
                 <Terminos>Términos y condiciones</Terminos>
                 <SimpleButon>Ver más</SimpleButon>
-            </ContentContainer>
-          </Card>
-        ))}
+              </ContentContainer>
+            </Card>
+          ))}
         </HamburguesasGridContainer>
+
+        <PreguntasContainer style={{ flexDirection: "column" }}>
+          <Titulo>
+            LONCHERITAS DE BEMBOS
+          </Titulo>
+          <p style={{ lineHeight: "25px", color: "black" }}>Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego para otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla con los mejores ingredientes que hemos elegido para ti: tocino, plátano, tomate, lechuga, huevo, queso y mucho más. ¡No esperes más y empieza a disfrutar de lo mejor del sabor peruano!</p>
+        </PreguntasContainer>
+
+        <PreguntasContainer>
+          <Faq
+            data={datos}
+            styles={{
+              titleTextColor: "#21388b",
+              rowTitleColor: "#21388b",
+              bgColor: "#ffffff",
+              arrowColor: "red",
+
+            }}
+          />
+        </PreguntasContainer>
+
       </CombosDeHamburguesasMainContainer>
     </>
   );

@@ -3,13 +3,19 @@ import data from "../:./../../../db.json";
 import { FirstHalfHeader } from "../Header/FirstHalfHeader";
 import { SecondHalfHeader } from "../Header/SecondHalfHeader";
 import { BarraCategoriasNav } from "./BarraCategoriasNav";
+import Faq from "react-faq-component";
+
+
 
 const CombosDeHamburguesasMainContainer = styled.section`
   width: 65%;
   margin: 0 auto;
 `;
 
-const Titulo = styled.h2``;
+const Titulo = styled.h2`
+  color: #173083;
+  font-size: 1.8rem;
+`;
 
 const HamburguesasGridContainer = styled.div`
     margin: 0 auto;
@@ -89,6 +95,55 @@ const SimpleButon = styled.button`
 
 `;
 
+const datos = {
+
+  title: "PREGUNTAS FRECUENTES SOBRE NUESTROS COMPLEMENTOS",
+  
+    rows: [
+      {
+        title:
+          "¿Puedo comprar más de un complemento Bembos?",
+        content:
+        "Sí, Podrás pedir tus papitas fritas bembos, chicken nuggets, chesse fingers y papas inka chips. Recuerda que para acceder al delivery debes considear un pedido como mínimo de S/12.90.",
+      },
+      {
+        title:
+          "¿Cuáles son los complementos Bembos?",
+        content:
+          "Los complementos Bembos que pueden ser pedidos son papas fritas, Chicken Nuggets y Cheese Fingers. Estas son un perfecto acompañamiento adicional para tus deliciosas hamburguesas a la parilla.",
+      },
+      {
+        title: "¿Cuántos Cheese fingers vienen por pedido de Delivery Online?",
+        content:
+          "Los Cheese fingers cuentan con tres presentaciones, estás diferencias por cantidades o unidades, las cuales son: x4, el x6 y el x9 unidades. Puedes añadir deliciosas cremas extras.",
+      },
+
+      {
+        title: "¿Cuántos nuggets vienen en los complementos Bembos?",
+        content:
+          "Al realizar la compra de tus Chicken Nuggets podrás acceder al pedido de x6 o x9 unidades. Puedes añadir deliciosas cremas extras.",
+      },
+  
+    ],
+  };
+
+  const PreguntasContainer = styled.div`
+    width: 100%;
+    display: flex !important;
+    margin-left: 100px;
+    padding-left: 10px;
+    padding-top: 30px;
+    background-color: #ffffff;
+    margin: 0 auto;
+
+@media (max-width: 900px) {
+    width: 100%;
+    margin: 0;
+  }
+`;
+
+  
+
 export const Complementos = () => {
   return (
     <>
@@ -112,6 +167,19 @@ export const Complementos = () => {
           </Card>
         ))}
         </HamburguesasGridContainer>
+
+        <PreguntasContainer>
+      <Faq
+          data={datos}
+           styles={{
+            titleTextColor: "#21388b",
+            rowTitleColor: "#21388b",
+            bgColor: "#ffffff",
+            arrowColor: "red",
+
+          }}
+        />
+    </PreguntasContainer>
       </CombosDeHamburguesasMainContainer>
     </>
   );
