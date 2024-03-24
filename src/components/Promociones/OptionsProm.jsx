@@ -5,6 +5,7 @@ import styled from "styled-components";
 const TablaPromociones = styled.div`
   background: #fff;
   display: flex;
+  justify-content: space-around;
   padding: 17px 0 15px;
   overflow-x: scroll;
 `;
