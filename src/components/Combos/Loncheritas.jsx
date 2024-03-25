@@ -146,7 +146,7 @@ export const Loncheritas = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
           {data.loncheritas[0].tipos.map((item) => (
-            <Card>
+            <Card key={item.id}>
               <ImageContainer>
                 <img src={item.img} alt="" />
               </ImageContainer>

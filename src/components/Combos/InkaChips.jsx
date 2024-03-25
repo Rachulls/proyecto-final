@@ -99,7 +99,7 @@ export const InkaChips = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
           {data.inkaChips.map((item) => (
-            <Card>
+            <Card key={item.id}>
               <ImageContainer>
                 <img src={item.img} alt="" />
               </ImageContainer>

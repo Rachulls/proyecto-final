@@ -148,7 +148,7 @@ export const Pollo = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
           {data.pollo[0].tipos.map((item) => (
-            <Card>
+            <Card key={item.id}>
               <ImageContainer>
                 <img src={item.img} alt="" />
               </ImageContainer>

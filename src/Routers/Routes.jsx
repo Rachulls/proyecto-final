@@ -15,9 +15,12 @@ import { Complementos } from "../components/Combos/Complementos";
 import { Helados } from "../components/Combos/Helados";
 import { InkaChips } from "../components/Combos/InkaChips";
 
+
+
 export function MyRouters() {
   return (
     <BrowserRouter>
+    
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/menu" element={<MenuPage />}></Route>

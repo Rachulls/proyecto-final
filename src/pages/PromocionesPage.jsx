@@ -8,6 +8,7 @@ import { PromocionesParaDos } from "../components/Promociones/PromocionesParaDos
 import { PromocionesPersonales } from "../components/Promociones/PromocionesPersonales"
 import {Footer} from "../components/Footer"
 import { OptionsProm } from "../components/Promociones/OptionsProm"
+import { ErrorPage } from "./ErrorPage"
 
 
 export const PromocionesPage = () =>{

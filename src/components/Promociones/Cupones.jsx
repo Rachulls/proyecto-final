@@ -162,7 +162,7 @@ export const Cupones = () => {
           </ListaCupones>
           <Slider {...settingsAll}>
             {data.cupones.map((item) => (
-              <ContainerCard>
+              <ContainerCard key={item.id}>
                 <Card>
                   <CardContent>
                     <h2>{item.nombre}</h2>

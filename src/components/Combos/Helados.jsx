@@ -157,7 +157,7 @@ export const Helados = () => {
 
         <HamburguesasGridContainer>
         {data.helados.map((item) => (
-          <Card>
+          <Card key={item.id}>
              <ImageContainer>
              <img src={item.img} alt="" />
                 </ImageContainer>            
