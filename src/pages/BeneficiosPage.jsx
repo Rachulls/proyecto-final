@@ -1,5 +1,15 @@
+import { Beneficios } from "../components/Beneficios/Beneficios"
+import { Footer } from "../components/Footer"
+import { FirstHalfHeader } from "../components/Header/FirstHalfHeader"
+import { SecondHalfHeader } from "../components/Header/SecondHalfHeader"
+
 export const BeneficiosPage = () =>{
     return(
-        <h1>Beneficios Page</h1>
+        <>
+        <FirstHalfHeader/>
+        <SecondHalfHeader/>
+        <Beneficios/>
+        <Footer/>
+        </>
     )
 }
