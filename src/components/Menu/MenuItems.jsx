@@ -90,7 +90,7 @@ export const MenuItems = () => {
     <Container>
       <CardContain>
         {data.menu.map((item) => (
-          <Card>
+          <Card key={item.id}>
             <CardImage image={item.img}>
               <h2>{item.nombre}</h2>
             </CardImage>

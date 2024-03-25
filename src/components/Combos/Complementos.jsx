@@ -154,7 +154,7 @@ export const Complementos = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
         {data.complementos.map((item) => (
-          <Card>
+          <Card key={item.id}>
              <ImageContainer>
              <img src={item.img} alt="" />
                 </ImageContainer>            

@@ -98,7 +98,7 @@ export const MenusAlPlato = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
         {data.MenusAlPlato.map((item) => (
-          <Card>
+          <Card key={item.id}>
              <ImageContainer>
              <img src={item.img} alt="" />
                 </ImageContainer>            

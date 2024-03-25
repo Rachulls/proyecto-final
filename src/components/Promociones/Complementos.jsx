@@ -118,7 +118,7 @@ export const Complementos = () => {
         <h2>Complementos:</h2>
         <Slider {...settingsAll}>
           {data.complementos.map((item) => (
-            <Card>
+            <Card key={item.id}>
               <CardContent>
               <CardImage image={item.img}><a>Términos y Condiciones</a></CardImage>
                 <h2>{item.nombre}</h2>

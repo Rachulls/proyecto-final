@@ -144,7 +144,7 @@ export const PromosOnline = () => {
       <h2>PROMOCIONES ONLINE</h2>
       <Slider {...settings}>
         {data.promociones_online.map((item) => (
-          <ContainerCard>
+          <ContainerCard key={item.id}>
             <Card>
               <CardImgOnline image={item.img}></CardImgOnline>
               <CardText>

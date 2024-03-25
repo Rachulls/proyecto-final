@@ -145,8 +145,6 @@ const CardImage = styled.div`
   }
 `;
 
-
-
 const settingsAll = {
   speed: 500,
   infinite: false,
@@ -183,12 +181,12 @@ export const PromocionesPersonales = () => {
         <PromocionesBody id="personales">
           <h1>PROMOCIONES DE HAMBURGUESAS PARA TI CON DELIVERY</h1>
           <ListaPromosPersonales>
-            <img src="src\img\user-blackb.svg" alt="" />
+            <img src="../../src/img/user-blackb.svg" alt="" />
             <h2>Promociones Personales</h2>
           </ListaPromosPersonales>
           <Slider {...settingsAll}>
             {data.promociones_personales.map((item) => (
-              <ContainerCard>
+              <ContainerCard key={item.id}>
                 <Card>
                   <CardContent>
                     <h2>{item.nombre}</h2>

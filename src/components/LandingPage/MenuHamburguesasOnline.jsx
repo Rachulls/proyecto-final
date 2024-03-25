@@ -118,7 +118,7 @@ export const MenuHamburguersOnline = () => {
       <h2>MENU DE HAMBURGUESAS ONLINE</h2>
       <Slider {...settings}>
         {data.menu.map((item) => (
-          <CardMenuHamOnline>
+          <CardMenuHamOnline key={item.id}>
               <Link to={item.link} key={item.nombre}>
               <Card>
                 <img src={item.img} />

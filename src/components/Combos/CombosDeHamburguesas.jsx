@@ -92,7 +92,7 @@ export const CombosDeHamburguesas = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
         {data.combos.map((item) => (
-          <Card>
+          <Card key={item.id}>
              <ImageContainer>
              <img src={item.img} alt="" />
                 </ImageContainer>            

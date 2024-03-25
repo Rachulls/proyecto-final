@@ -150,7 +150,7 @@ export const Hamburguesas = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
           {data.hamburguesas.map((item) => (
-            <Card>
+            <Card key={item.id}>
               <ImageContainer>
                 <img src={item.img} alt="" />
               </ImageContainer>

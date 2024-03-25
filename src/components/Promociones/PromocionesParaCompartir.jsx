@@ -143,6 +143,7 @@ const CardImage = styled.div`
 `;
 
 const Terminos = styled.div``;
+const TerYCond = styled.div``;
 
 const settingsAll = {
   speed: 500,
@@ -176,12 +177,12 @@ export const PromocionesParaCompartir = () => {
       <PromocionesContainer>
         <PromocionesBody id="compartir">
           <ListaPromosParaCompartir>
-            <img src="src\img\promo-compartir.svg" />
+            <img src="../../src/img/promo-compartir.svg" />
             <h2>Promociones para compartir</h2>
           </ListaPromosParaCompartir>
           <Slider {...settingsAll}>
             {data.promociones_para_compartir.map((item) => (
-              <ContainerCard>
+              <ContainerCard key={item.id}>
                 <Card>
                   <CardContent>
                     <h2>
@@ -199,8 +200,11 @@ export const PromocionesParaCompartir = () => {
                     -{item.descuento}%
                     </Descuento>
                     <Terminos>
-                      {item.terminos_blanco}
+                      <TerYCond>
+                        {item.terminos_blanco}
                       {item.terminos_negro}
+                      </TerYCond>
+                      
                     </Terminos>
                   </CardImage>
                 </Card>

@@ -99,7 +99,7 @@ export const Bebidas = () => {
       <CombosDeHamburguesasMainContainer>
         <HamburguesasGridContainer>
           {data.bebidas.map((item) => (
-            <Card>
+            <Card key={item.id}>
               <ImageContainer>
                 <img src={item.img} alt="" />
               </ImageContainer>

@@ -144,6 +144,16 @@ background: url(${(props) => (props.image ? props.image : "")}) center
 `;
 
 
+const Terminos = styled.div`
+div{
+  text-decoration: underline;
+  transform: translateX(40px);
+  color: #fff;
+
+}
+
+`;
+
 const settingsAll = {
   speed: 500,
   infinite: false,
@@ -176,12 +186,12 @@ export const PromocionesParaDos = () => {
       <PromocionesContainer>
         <PromocionesBody id="parados">
           <ListaPromosParaDos>
-            <img src="src\img\promo-para-2.svg" alt="" />
+            <img src="../../src/img/promo-para-2.svg" alt="" />
             <h2>Promociones para 2</h2>
           </ListaPromosParaDos>
           <Slider {...settingsAll}>
             {data.promociones_para_dos.map((item) => (
-              <ContainerCard>
+              <ContainerCard key={item.id}>
                 <Card>
                   <CardContent>
                     <h2>{item.nombre_azul} {item.nombre_negro}</h2>
@@ -196,6 +206,10 @@ export const PromocionesParaDos = () => {
                   <Descuento>
                       -{item.descuento}%
                     </Descuento>
+                    <Terminos>
+                      {item.terminos_blanco}
+                      {item.terminos_negro}
+                    </Terminos>
                   </CardImage>
                 </Card>
               </ContainerCard>
