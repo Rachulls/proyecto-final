@@ -1,12 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import data from "../../../db.json";
 import Slider from "react-slick";
 
-
-
 const PromocionesContainer = styled.div`
-  max-width: 1134px;
+max-width: 1134px;
   width: 100%;
   margin: auto;
   background-color: #f6f7f8;
@@ -16,7 +14,7 @@ const PromocionesContainer = styled.div`
 `;
 
 const PromocionesBody = styled.div`
-  h1 {
+h1 {
     margin: 15px 0 25px;
     color: #3b3c40;
     font-size: 30px;
@@ -26,8 +24,8 @@ const PromocionesBody = styled.div`
   }
 `;
 
-const ListaPromosPersonales = styled.div`
-  display: flex;
+const ListaPromosParaDos = styled.div`
+display: flex;
   flex-direction: row;
   h2 {
     margin: 15px 0;
@@ -39,12 +37,12 @@ const ListaPromosPersonales = styled.div`
 `;
 
 const ContainerCard = styled.div`
-  padding: 0 2rem;
+padding: 0 2rem;
   padding-top: 30px;
 `;
 
 const Card = styled.div`
-  display: flex !important;
+display: flex !important;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
@@ -56,8 +54,9 @@ const Card = styled.div`
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
   overflow: hidden;
 `;
+
 const CardContent = styled.div`
-  padding: 13px;
+padding: 13px;
   margin: 0 10px;
   position: relative;
   height: 100%;
@@ -65,7 +64,7 @@ const CardContent = styled.div`
   border-radius: 10px;
   width: 50%;
   h2 {
-    color: #193694;
+    /* color: #193694; */
     padding-bottom: 15px;
   }
   button{
@@ -83,9 +82,8 @@ const CardContent = styled.div`
     margin-left: 20px;
   }
 `;
-
-const Prices = styled.div`
-    h3{
+const Prices= styled.div`
+h3{
       font-weight: 700;
     color: #030819;
     font-size: 27px;
@@ -123,7 +121,7 @@ color: #fff;
 `;
 
 const CardImage = styled.div`
-  background: url(${(props) => (props.image ? props.image : "")}) center
+background: url(${(props) => (props.image ? props.image : "")}) center
     no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -170,26 +168,22 @@ const settingsAll = {
    },
 ]
 };
-
-
-
-export const PromocionesPersonales = () => {
+ 
+export const PromsForTwo = () => {
   return (
     <div>
-      
       <PromocionesContainer>
-        <PromocionesBody id="personales">
-          <h1>PROMOCIONES DE HAMBURGUESAS PARA TI CON DELIVERY</h1>
-          <ListaPromosPersonales>
-            <img src="../../src/img/user-blackb.svg" alt="" />
-            <h2>Promociones Personales</h2>
-          </ListaPromosPersonales>
+        <PromocionesBody id="parados">
+          <ListaPromosParaDos>
+            <img src="../../src/img/promo-para-2.svg" alt="" />
+            <h2>Promociones para 2</h2>
+          </ListaPromosParaDos>
           <Slider {...settingsAll}>
-            {data.promociones_personales.map((item) => (
+            {data.promociones_para_dos.map((item) => (
               <ContainerCard key={item.id}>
                 <Card>
                   <CardContent>
-                    <h2>{item.nombre}</h2>
+                    <h2>{item.nombre_azul} {item.nombre_negro}</h2>
                     <p>{item.descripcion}</p>
                     <Prices>
                       <h3>S/. {item.precio_actual}</h3>
@@ -199,7 +193,7 @@ export const PromocionesPersonales = () => {
                   </CardContent>
                   <CardImage image={item.img}>
                   <Descuento>
-                  -{item.descuento}%
+                      -{item.descuento}%
                     </Descuento>
                   </CardImage>
                 </Card>
@@ -209,5 +203,5 @@ export const PromocionesPersonales = () => {
         </PromocionesBody>
       </PromocionesContainer>
     </div>
-  );
-};
+  )
+}

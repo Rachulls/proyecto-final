@@ -48,7 +48,7 @@ background-color: #F6F7F8;
   }
 `;
 
-export const PreguntasFrecuentes = () => {
+export const FreqQuetions = () => {
     
   return (
     <>

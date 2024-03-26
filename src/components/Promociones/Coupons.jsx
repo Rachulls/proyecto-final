@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import data from "../../../db.json";
 import Slider from "react-slick";
 
-const PromocionesContainer = styled.div`
-  max-width: 1134px;
+const CuponesContainer = styled.div`
+max-width: 1134px;
   width: 100%;
   margin: auto;
   background-color: #f6f7f8;
@@ -13,8 +13,8 @@ const PromocionesContainer = styled.div`
   }
 `;
 
-const PromocionesBody = styled.div`
-  h1 {
+const CuponesBody = styled.div`
+h1 {
     margin: 15px 0 25px;
     color: #3b3c40;
     font-size: 30px;
@@ -24,8 +24,8 @@ const PromocionesBody = styled.div`
   }
 `;
 
-const ListaPromosParaCompartir = styled.div`
-  display: flex;
+const ListaCupones = styled.div`
+display: flex;
   flex-direction: row;
   h2 {
     margin: 15px 0;
@@ -37,12 +37,12 @@ const ListaPromosParaCompartir = styled.div`
 `;
 
 const ContainerCard = styled.div`
-  padding: 0 2rem;
+padding: 0 2rem;
   padding-top: 30px;
 `;
 
 const Card = styled.div`
-  display: flex !important;
+display: flex !important;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
@@ -56,7 +56,7 @@ const Card = styled.div`
 `;
 
 const CardContent = styled.div`
-  padding: 13px;
+padding: 13px;
   margin: 0 10px;
   position: relative;
   height: 100%;
@@ -67,7 +67,12 @@ const CardContent = styled.div`
     color: #193694;
     padding-bottom: 15px;
   }
-  button {
+  h4{
+    color: #334992;
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  button{
     width: 171px;
     max-width: 100%;
     border: none;
@@ -82,18 +87,18 @@ const CardContent = styled.div`
     margin-left: 20px;
   }
 `;
-const Prices = styled.div`
-  h3 {
-    font-weight: 700;
+const Prices= styled.div`
+h3{
+      font-weight: 700;
     color: #030819;
     font-size: 27px;
     padding: 25px 0;
     border-radius: 20px;
     display: inline-block;
     width: 50%;
-  }
-  h4 {
-    position: relative;
+    };
+    h4{
+      position: relative;
     width: 50%;
     font-size: 20px;
     color: #ec0b0b;
@@ -103,25 +108,10 @@ const Prices = styled.div`
     margin: 4px 0 0;
     padding-top: 20px;
     text-decoration: line-through;
-  }
+    }
 `;
-
-const Descuento = styled.div`
-color: #fff;
-    background: #d50e0e;
-    border-radius: 15px;
-    font-size: 17px;
-    font-weight: 700;
-    max-height: 40px;
-    line-height: 36px;
-    margin-top: 15px;
-    margin-left: 15px;
-    width: 60px;
-    text-align: center;
-`;
-
 const CardImage = styled.div`
-  background: url(${(props) => (props.image ? props.image : "")}) center
+background: url(${(props) => (props.image ? props.image : "")}) center
     no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -129,21 +119,16 @@ const CardImage = styled.div`
   border-radius: 0 15px 15px 0;
   height: 231px;
   width: 255px;
+  transition: all 0.4s;
   -o-object-fit: cover;
   object-fit: cover;
   max-width: 100% !important;
   overflow: hidden;
-  &:hover {
-    transition: all 0.4s;
-    transform: scale(1.1) translateY(-5%);
-    ${Descuento}{
-      display: none !important;
-    }
+  &:hover{
+      transition: all 0.4s;
+      transform: scale(1.1) translateY(-5%);
   }
 `;
-
-const Terminos = styled.div``;
-const TerYCond = styled.div``;
 
 const settingsAll = {
   speed: 500,
@@ -167,52 +152,39 @@ const settingsAll = {
         vertical: false,
         slidesToScroll: 1,
       },
-   },
+ },
 ]
 };
 
-export const PromocionesParaCompartir = () => {
+export const Coupons = () => {
+    
   return (
     <div>
-      <PromocionesContainer>
-        <PromocionesBody id="compartir">
-          <ListaPromosParaCompartir>
-            <img src="../../src/img/promo-compartir.svg" />
-            <h2>Promociones para compartir</h2>
-          </ListaPromosParaCompartir>
+      <CuponesContainer>
+        <CuponesBody id="cupones">
+          <ListaCupones>
+            <h2>Cupones</h2>
+          </ListaCupones>
           <Slider {...settingsAll}>
-            {data.promociones_para_compartir.map((item) => (
+            {data.cupones.map((item) => (
               <ContainerCard key={item.id}>
                 <Card>
                   <CardContent>
-                    <h2>
-                      {item.nombre_azul} {item.nombre_negro}
-                    </h2>
+                    <h2>{item.nombre}</h2>
                     <p>{item.descripcion}</p>
+                    <h4>{item.aviso}</h4>
                     <Prices>
                       <h3>S/. {item.precio_actual}</h3>
-                      <h4>S/. {item.precio_antiguo}</h4>
                     </Prices>
-                    <button>Ver más</button>
+                    <button>Agregar</button>
                   </CardContent>
-                  <CardImage image={item.img}>
-                    <Descuento>
-                    -{item.descuento}%
-                    </Descuento>
-                    <Terminos>
-                      <TerYCond>
-                        {item.terminos_blanco}
-                      {item.terminos_negro}
-                      </TerYCond>
-                      
-                    </Terminos>
-                  </CardImage>
+                  <CardImage image={item.img}></CardImage>
                 </Card>
               </ContainerCard>
             ))}
           </Slider>
-        </PromocionesBody>
-      </PromocionesContainer>
+        </CuponesBody>
+      </CuponesContainer>
     </div>
-  );
-};
+  )
+}

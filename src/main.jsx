@@ -8,7 +8,6 @@ import { CombosPage } from "./pages/CombosPage.jsx";
 import { PromocionesPage } from "./pages/PromocionesPage.jsx";
 import { InkaChips } from "./components/Combos/InkaChips.jsx";
 import { Helados } from "./components/Combos/Helados.jsx";
-import { Complementos } from "./components/Combos/Complementos.jsx";
 import { Loncheritas } from "./components/Combos/Loncheritas.jsx";
 import { MenusAlPlato } from "./components/Combos/MenusAlPlato.jsx";
 import { Pollo } from "./components/Combos/Pollo.jsx";
@@ -17,6 +16,7 @@ import { Hamburguesas } from "./components/Combos/Hamburguesas.jsx";
 import { BeneficiosPage } from "./pages/BeneficiosPage.jsx";
 import { HamburguesasPage } from "./pages/HamburguesasPage.jsx";
 import "./index.css";
+import { FoodSuplements } from "./components/Promociones/FoodSuplements.jsx";
 
 const router = createBrowserRouter([
   {
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/menu/complementos",
-        element: <Complementos />,
+        element: <FoodSuplements />,
         errorElement: <ErrorPage />,
       },
       {
@@ -90,7 +90,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/menu/inka-chips",
-        element: <InkaChips />,
+        element: <ErrorPage />,
         errorElement: <ErrorPage />,
       },
     ],

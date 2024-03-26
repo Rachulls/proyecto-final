@@ -11,9 +11,9 @@ import { Bebidas } from "../components/Combos/Bebidas";
 import { Pollo } from "../components/Combos/Pollo";
 import { MenusAlPlato } from "../components/Combos/MenusAlPlato";
 import { Loncheritas } from "../components/Combos/Loncheritas";
-import { Complementos } from "../components/Combos/Complementos";
 import { Helados } from "../components/Combos/Helados";
 import { InkaChips } from "../components/Combos/InkaChips";
+import { FoodSuplements } from "../components/Promociones/FoodSuplements";
 
 
 
@@ -35,7 +35,7 @@ export function MyRouters() {
         <Route path="/menu/pollo" element={<Pollo />}></Route>
         <Route path="/menu/menus-al-plato" element={<MenusAlPlato />}></Route>
         <Route path="/menu/loncheritas" element={<Loncheritas />}></Route>
-        <Route path="/menu/complementos" element={<Complementos />}></Route>
+        <Route path="/menu/complementos" element={<FoodSuplements />}></Route>
         <Route path="/menu/helados" element={<Helados />}></Route>
         <Route path="/menu/inka-chips" element={<InkaChips />}></Route>
 
