@@ -40,7 +40,7 @@ export const BarraCategoriasNav = () => {
                     <Enlace>LONCHERITAS</Enlace>
                 </Link>
 
-                <Link to="/menu/complementos">
+                <Link to="/menu/FoodSuplements">
                     <Enlace>COMPLEMENTOS</Enlace>
                 </Link>
 

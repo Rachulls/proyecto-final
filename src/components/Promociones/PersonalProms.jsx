@@ -1,10 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import data from "../../../db.json";
 import Slider from "react-slick";
 
+
+
 const PromocionesContainer = styled.div`
-max-width: 1134px;
+  max-width: 1134px;
   width: 100%;
   margin: auto;
   background-color: #f6f7f8;
@@ -14,7 +16,7 @@ max-width: 1134px;
 `;
 
 const PromocionesBody = styled.div`
-h1 {
+  h1 {
     margin: 15px 0 25px;
     color: #3b3c40;
     font-size: 30px;
@@ -24,8 +26,8 @@ h1 {
   }
 `;
 
-const ListaPromosParaDos = styled.div`
-display: flex;
+const ListaPromosPersonales = styled.div`
+  display: flex;
   flex-direction: row;
   h2 {
     margin: 15px 0;
@@ -37,12 +39,12 @@ display: flex;
 `;
 
 const ContainerCard = styled.div`
-padding: 0 2rem;
+  padding: 0 2rem;
   padding-top: 30px;
 `;
 
 const Card = styled.div`
-display: flex !important;
+  display: flex !important;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
@@ -54,9 +56,8 @@ display: flex !important;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
   overflow: hidden;
 `;
-
 const CardContent = styled.div`
-padding: 13px;
+  padding: 13px;
   margin: 0 10px;
   position: relative;
   height: 100%;
@@ -64,7 +65,7 @@ padding: 13px;
   border-radius: 10px;
   width: 50%;
   h2 {
-    /* color: #193694; */
+    color: #193694;
     padding-bottom: 15px;
   }
   button{
@@ -82,8 +83,9 @@ padding: 13px;
     margin-left: 20px;
   }
 `;
-const Prices= styled.div`
-h3{
+
+const Prices = styled.div`
+    h3{
       font-weight: 700;
     color: #030819;
     font-size: 27px;
@@ -121,7 +123,7 @@ color: #fff;
 `;
 
 const CardImage = styled.div`
-background: url(${(props) => (props.image ? props.image : "")}) center
+  background: url(${(props) => (props.image ? props.image : "")}) center
     no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -141,17 +143,6 @@ background: url(${(props) => (props.image ? props.image : "")}) center
       display: none !important;
     }
   }
-`;
-
-
-const Terminos = styled.div`
-div{
-  text-decoration: underline;
-  transform: translateX(40px);
-  color: #fff;
-
-}
-
 `;
 
 const settingsAll = {
@@ -179,22 +170,26 @@ const settingsAll = {
    },
 ]
 };
- 
-export const PromocionesParaDos = () => {
+
+
+
+export const PersonalProms = () => {
   return (
     <div>
+      
       <PromocionesContainer>
-        <PromocionesBody id="parados">
-          <ListaPromosParaDos>
-            <img src="../../src/img/promo-para-2.svg" alt="" />
-            <h2>Promociones para 2</h2>
-          </ListaPromosParaDos>
+        <PromocionesBody id="personales">
+          <h1>PROMOCIONES DE HAMBURGUESAS PARA TI CON DELIVERY</h1>
+          <ListaPromosPersonales>
+            <img src="../../src/img/user-blackb.svg" alt="" />
+            <h2>Promociones Personales</h2>
+          </ListaPromosPersonales>
           <Slider {...settingsAll}>
-            {data.promociones_para_dos.map((item) => (
+            {data.promociones_personales.map((item) => (
               <ContainerCard key={item.id}>
                 <Card>
                   <CardContent>
-                    <h2>{item.nombre_azul} {item.nombre_negro}</h2>
+                    <h2>{item.nombre}</h2>
                     <p>{item.descripcion}</p>
                     <Prices>
                       <h3>S/. {item.precio_actual}</h3>
@@ -204,12 +199,8 @@ export const PromocionesParaDos = () => {
                   </CardContent>
                   <CardImage image={item.img}>
                   <Descuento>
-                      -{item.descuento}%
+                  -{item.descuento}%
                     </Descuento>
-                    <Terminos>
-                      {item.terminos_blanco}
-                      {item.terminos_negro}
-                    </Terminos>
                   </CardImage>
                 </Card>
               </ContainerCard>
@@ -218,5 +209,5 @@ export const PromocionesParaDos = () => {
         </PromocionesBody>
       </PromocionesContainer>
     </div>
-  )
-}
+  );
+};

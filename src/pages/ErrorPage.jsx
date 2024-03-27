@@ -4,20 +4,20 @@ import React from "react";
 
 const ErrorPageContainer = styled.div`
   background-color: #fff;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 32px 32px 64px 32px;
   @media (min-width: 768px) {
     .error__pagina__contenedor {
-      padding: 10rem 2rem 20rem 2rem;
+      padding: 160px 32px 320px 32px;
     }
   }
-  @media (min-width: 992px) {
+  @media (min-width: 900px) {
     .error__pagina__contenedor {
-      padding: 6rem 2rem 4rem 2rem;
+      padding: 96px 32px 64px 32px;
     }
   }
   h2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 30px;
     color: #173083;
   }
 `;
@@ -25,11 +25,11 @@ const ErrorPageContainer = styled.div`
 const ErrorPageContain = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 32px;
   display: flex;
     flex-direction: row;
     justify-content: center;
-  @media (min-width: 992px) {
+  @media (min-width: 900px) {
     .error__pagina__contenido {
       flex-direction: row;
       justify-content: center;
@@ -55,16 +55,16 @@ const ErrorPageContain = styled.div`
 const ErrorPageMessage = styled.div`
 display: flex;
     flex-direction: column;
-    gap: 1rem;
     text-align: center;
+    gap: 16px;
+    padding-top: 20px;
 `;
 const ErrorPageMenu = styled.div`
 text-align: center;
-    font-size: 2.5rem;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 30px;
-    transition: color .3s;
 `;
 
 export const ErrorPage = () => {

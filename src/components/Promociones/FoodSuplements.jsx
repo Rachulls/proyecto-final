@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
-import data from "../../../../proyecto-final/db.json";
+import data from "../../../db.json";
 
 const ComplementosGeneral = styled.div`
   padding-top: 60px;
@@ -111,7 +111,7 @@ const settingsAll = {
 ]
 };
 
-export const Complementos = () => {
+export const FoodSuplements = () => {
   return (
     <>
       <ComplementosGeneral>

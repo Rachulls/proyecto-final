@@ -1,14 +1,13 @@
 import { FirstHalfHeader } from "../components/Header/FirstHalfHeader"
 import { SecondHalfHeader } from "../components/Header/SecondHalfHeader"
-import { Complementos } from "../components/Promociones/Complementos"
-import { Cupones } from "../components/Promociones/Cupones"
-import { PreguntasFrecuentes } from "../components/Promociones/PreguntasFrecuentes"
-import { PromocionesParaCompartir } from "../components/Promociones/PromocionesParaCompartir"
-import { PromocionesParaDos } from "../components/Promociones/PromocionesParaDos"
-import { PromocionesPersonales } from "../components/Promociones/PromocionesPersonales"
+import { Coupons } from "../components/Promociones/Coupons"
+import { FreqQuetions } from "../components/Promociones/FreqQuetions"
+import { PromsToShare } from "../components/Promociones/PromsToShare"
+import { PromsForTwo } from "../components/Promociones/PromsForTwo"
+import { PersonalProms } from "../components/Promociones/PersonalProms"
 import {Footer} from "../components/Footer"
 import { OptionsProm } from "../components/Promociones/OptionsProm"
-import { ErrorPage } from "./ErrorPage"
+import { FoodSuplements } from "../components/Promociones/FoodSuplements"
 
 
 export const PromocionesPage = () =>{
@@ -17,14 +16,14 @@ export const PromocionesPage = () =>{
         <FirstHalfHeader/>
         <SecondHalfHeader/>
         <OptionsProm/>
-        <PromocionesPersonales/>
-        <Complementos/>
-        <PromocionesParaDos/>
-        <Complementos/>
-        <PromocionesParaCompartir/>
-        <Complementos/>
-        <Cupones/>
-        <PreguntasFrecuentes/>
+        <PersonalProms/>
+        <FoodSuplements/>
+        <PromsForTwo/>
+        <FoodSuplements/>
+        <PromsToShare/>
+        <FoodSuplements/>
+        <Coupons/>
+        <FreqQuetions/>
         <Footer/>
         </>
     )
