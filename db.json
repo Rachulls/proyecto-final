@@ -1337,8 +1337,97 @@
 			}
 
 
-		]
-
-
-	
+	],
+	"beneficios_friendzone":[
+		{
+			"nombre_negro": "Pareja real",
+			"precio_actual": 39.90,
+			"descuento": 37,
+			"id": 112,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Clásico amor",
+			"precio_actual": 42.90,
+			"descuento": 37,
+			"id": 113,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-clasico-amor-beneficios.jpg"
+		}
+	],
+	"beneficios_gileos":[
+		{
+			"nombre_negro": "Amor a la churrita",
+			"precio_actual": 18.90,
+			"descuento": 42,
+			"id": 114,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Pasión de barrio",
+			"precio_actual": 29.90,
+			"descuento": 40,
+			"id": 115,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-clasico-amor-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Amor sin fronteras",
+			"precio_actual": 52.90,
+			"descuento": 39,
+			"id": 116,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+		}
+	],
+	"beneficios_relacion":[
+		{
+			"nombre_negro": "La Churrita del barrio",
+			"precio_actual": 39.90,
+			"descuento": 42,
+			"id": 118,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Rica pero humilde",
+			"precio_actual": 21.90,
+			"descuento": 39,
+			"id": 119,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-clasico-amor-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Amor a la parrilla mediano",
+			"precio_actual": 34.90,
+			"descuento": 36,
+			"id": 120,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+		}
+	],
+	"beneficios_destinados":[
+		{
+			"nombre_negro": "Almas gemelas",
+			"precio_actual": 25.90,
+			"descuento": 43,
+			"id": 122,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Mi Complice perfecto",
+			"precio_actual": 19.90,
+			"descuento": 37,
+			"id": 123,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-clasico-amor-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Amor Parrillero",
+			"precio_actual": 23.90,
+			"descuento": 31,
+			"id": 124,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+		},
+		{
+			"nombre_negro": "Amor Extremo",
+			"precio_actual": 21.90,
+			"descuento": 27,
+			"id": 125,
+			"img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-clasico-amor-beneficios.jpg"
+		}
+	]
 }
